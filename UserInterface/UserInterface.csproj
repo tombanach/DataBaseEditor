@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BEAAC540-E5F9-4095-A125-B045289F4CEB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SmayDbEditor.UserInterface</RootNamespace>
+    <AssemblyName>SmayDbEditor</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=5.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.5.0.1\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.5.0.0\lib\net461\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\OrderAddressChangeEventArgs.cs" />
+    <Compile Include="Classes\OrderCorrectionEventArgs.cs" />
+    <Compile Include="Classes\PrinterAddingEventArgs.cs" />
+    <Compile Include="Classes\StatusChangeEventArgs.cs" />
+    <Compile Include="Extensions\ExtensionsMethods.cs" />
+    <Compile Include="Forms\Base\BaseEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Base\BaseEditForm.Designer.cs">
+      <DependentUpon>BaseEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Base\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Base\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\KanbansRemove\KanbansRemoveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KanbansRemove\KanbansRemoveForm.Designer.cs">
+      <DependentUpon>KanbansRemoveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OrdersAddressChange\OrderAddressChangeEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OrdersAddressChange\OrderAddressChangeEditForm.Designer.cs">
+      <DependentUpon>OrderAddressChangeEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OrdersAddressChange\OrdersAddressChangeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OrdersAddressChange\OrdersAddressChangeForm.Designer.cs">
+      <DependentUpon>OrdersAddressChangeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OrdersCorrection\OrderCorrectionEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OrdersCorrection\OrderCorrectionEditForm.Designer.cs">
+      <DependentUpon>OrderCorrectionEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OrdersCorrection\OrdersCorrectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OrdersCorrection\OrdersCorrectionForm.Designer.cs">
+      <DependentUpon>OrdersCorrectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PrintersAdding\PrinterAddingAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PrintersAdding\PrinterAddingAddForm.Designer.cs">
+      <DependentUpon>PrinterAddingAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PrintersAdding\PrinterAddingEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PrintersAdding\PrinterAddingEditForm.Designer.cs">
+      <DependentUpon>PrinterAddingEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PrintersAdding\PrintersAddingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PrintersAdding\PrintersAddingForm.Designer.cs">
+      <DependentUpon>PrintersAddingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StatusChanges\StatusChangeEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StatusChanges\StatusChangeEditForm.Designer.cs">
+      <DependentUpon>StatusChangeEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StatusChanges\StatusChangesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StatusChanges\StatusChangesForm.Designer.cs">
+      <DependentUpon>StatusChangesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\MappingHelper.cs" />
+    <Compile Include="Helpers\ResourcesHelper.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Base\BaseEditForm.resx">
+      <DependentUpon>BaseEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Base\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KanbansRemove\KanbansRemoveForm.resx">
+      <DependentUpon>KanbansRemoveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OrdersAddressChange\OrderAddressChangeEditForm.resx">
+      <DependentUpon>OrderAddressChangeEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OrdersAddressChange\OrdersAddressChangeForm.resx">
+      <DependentUpon>OrdersAddressChangeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OrdersCorrection\OrderCorrectionEditForm.resx">
+      <DependentUpon>OrderCorrectionEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OrdersCorrection\OrdersCorrectionForm.resx">
+      <DependentUpon>OrdersCorrectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PrintersAdding\PrinterAddingAddForm.resx">
+      <DependentUpon>PrinterAddingAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PrintersAdding\PrinterAddingEditForm.resx">
+      <DependentUpon>PrinterAddingEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PrintersAdding\PrintersAddingForm.resx">
+      <DependentUpon>PrintersAddingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StatusChanges\StatusChangeEditForm.resx">
+      <DependentUpon>StatusChangeEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StatusChanges\StatusChangesForm.resx">
+      <DependentUpon>StatusChangesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\SmayDbEditor.DataAccessLayer.Models.Dictionaries.PrinterModel.datasource" />
+    <None Include="Properties\DataSources\SmayDbEditor.DataAccessLayer.Models.EntityModel.datasource" />
+    <None Include="Properties\DataSources\SmayDbEditor.DataAccessLayer.Models.OrderCorrectionModel.datasource" />
+    <None Include="Properties\DataSources\SmayDbEditor.DataAccessLayer.ViewModel.KanbanRemoveViewModel.datasource" />
+    <None Include="Properties\DataSources\SmayDbEditor.DataAccessLayer.ViewModel.OrderAddressChangeViewModel.datasource" />
+    <None Include="Properties\DataSources\SmayDbEditor.DataAccessLayer.ViewModel.OrderCorrectionViewModel1.datasource" />
+    <None Include="Properties\DataSources\SmayDbEditor.DataAccessLayer.ViewModel.PrinterAddingViewModel.datasource" />
+    <None Include="Properties\DataSources\SmayDbEditor.DataAccessLayer.ViewModel.StatusChangeViewModel.datasource" />
+    <None Include="Properties\DataSources\SmayDbEditor.DataAccessLayer.ViewModels.OrderCorrectionViewModel.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{c5106c4a-bf79-4e29-b379-0da6cd69a0b5}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_24.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

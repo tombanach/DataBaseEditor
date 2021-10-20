@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserInterface", "UserInterface\UserInterface.csproj", "{BEAAC540-E5F9-4095-A125-B045289F4CEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{C5106C4A-BF79-4E29-B379-0DA6CD69A0B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BEAAC540-E5F9-4095-A125-B045289F4CEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEAAC540-E5F9-4095-A125-B045289F4CEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEAAC540-E5F9-4095-A125-B045289F4CEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEAAC540-E5F9-4095-A125-B045289F4CEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5106C4A-BF79-4E29-B379-0DA6CD69A0B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5106C4A-BF79-4E29-B379-0DA6CD69A0B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5106C4A-BF79-4E29-B379-0DA6CD69A0B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5106C4A-BF79-4E29-B379-0DA6CD69A0B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {94EA4298-270B-433D-971C-9EAD959B62C8}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/tbanach
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = UserInterface\\UserInterface.csproj
+		SccProjectName1 = UserInterface
+		SccLocalPath1 = UserInterface
+		SccProjectUniqueName2 = DataAccessLayer\\DataAccessLayer.csproj
+		SccProjectName2 = DataAccessLayer
+		SccLocalPath2 = DataAccessLayer
+	EndGlobalSection
+EndGlobal
