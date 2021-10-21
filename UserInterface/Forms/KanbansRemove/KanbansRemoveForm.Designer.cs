@@ -44,6 +44,9 @@ namespace SmayDbEditor.UserInterface.Forms.KanbansRemove
             this.col_kbtr_status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_kbtr_tstamp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bsKanbansRemove = new System.Windows.Forms.BindingSource(this.components);
+            this.splitter2 = new System.Windows.Forms.Splitter();
+            this.lblKanbanNumber = new System.Windows.Forms.Label();
+            this.KanbansRemoveSearchBar = new System.Windows.Forms.TextBox();
             this.tlpKanbansRemove.SuspendLayout();
             this.pKanbansRemove.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKanbansRemove)).BeginInit();
@@ -68,6 +71,9 @@ namespace SmayDbEditor.UserInterface.Forms.KanbansRemove
             // 
             // pKanbansRemove
             // 
+            this.pKanbansRemove.Controls.Add(this.KanbansRemoveSearchBar);
+            this.pKanbansRemove.Controls.Add(this.lblKanbanNumber);
+            this.pKanbansRemove.Controls.Add(this.splitter2);
             this.pKanbansRemove.Controls.Add(this.btnRefresh);
             this.pKanbansRemove.Controls.Add(this.splitter1);
             this.pKanbansRemove.Controls.Add(this.btnRemove);
@@ -197,6 +203,31 @@ namespace SmayDbEditor.UserInterface.Forms.KanbansRemove
             // 
             this.bsKanbansRemove.DataSource = typeof(SmayDbEditor.DataAccessLayer.ViewModel.KanbanRemoveViewModel);
             // 
+            // splitter2
+            // 
+            this.splitter2.Location = new System.Drawing.Point(240, 0);
+            this.splitter2.Name = "splitter2";
+            this.splitter2.Size = new System.Drawing.Size(266, 34);
+            this.splitter2.TabIndex = 10;
+            this.splitter2.TabStop = false;
+            // 
+            // lblKanbanNumber
+            // 
+            this.lblKanbanNumber.AutoSize = true;
+            this.lblKanbanNumber.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblKanbanNumber.Location = new System.Drawing.Point(512, 7);
+            this.lblKanbanNumber.Name = "lblKanbanNumber";
+            this.lblKanbanNumber.Size = new System.Drawing.Size(121, 20);
+            this.lblKanbanNumber.TabIndex = 11;
+            this.lblKanbanNumber.Text = "Numer kanbana";
+            // 
+            // KanbansRemoveSearchBar
+            // 
+            this.KanbansRemoveSearchBar.Location = new System.Drawing.Point(639, 7);
+            this.KanbansRemoveSearchBar.Name = "KanbansRemoveSearchBar";
+            this.KanbansRemoveSearchBar.Size = new System.Drawing.Size(146, 20);
+            this.KanbansRemoveSearchBar.TabIndex = 12;
+            // 
             // KanbansRemoveForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -208,6 +239,7 @@ namespace SmayDbEditor.UserInterface.Forms.KanbansRemove
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.KanbansRemoveForm_FormClosed);
             this.tlpKanbansRemove.ResumeLayout(false);
             this.pKanbansRemove.ResumeLayout(false);
+            this.pKanbansRemove.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKanbansRemove)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsKanbansRemove)).EndInit();
             this.ResumeLayout(false);
@@ -230,5 +262,8 @@ namespace SmayDbEditor.UserInterface.Forms.KanbansRemove
         private System.Windows.Forms.DataGridViewTextBoxColumn col_kbtr_relDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_kbtr_status;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_kbtr_tstamp;
+        private System.Windows.Forms.Splitter splitter2;
+        private System.Windows.Forms.Label lblKanbanNumber;
+        private System.Windows.Forms.TextBox KanbansRemoveSearchBar;
     }
 }

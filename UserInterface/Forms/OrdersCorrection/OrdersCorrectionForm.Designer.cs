@@ -32,7 +32,7 @@ namespace SmayDbEditor.UserInterface.Forms.OrdersCorrection
             this.components = new System.ComponentModel.Container();
             this.tlpOrdersCorrection = new System.Windows.Forms.TableLayoutPanel();
             this.pOrdersCorrection = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblOrderNumber = new System.Windows.Forms.Label();
             this.OrdersCorrectionSearchBar = new System.Windows.Forms.TextBox();
             this.splitter3 = new System.Windows.Forms.Splitter();
             this.btnRefresh = new System.Windows.Forms.Button();
@@ -74,7 +74,7 @@ namespace SmayDbEditor.UserInterface.Forms.OrdersCorrection
             // pOrdersCorrection
             // 
             this.pOrdersCorrection.BackColor = System.Drawing.Color.White;
-            this.pOrdersCorrection.Controls.Add(this.label1);
+            this.pOrdersCorrection.Controls.Add(this.lblOrderNumber);
             this.pOrdersCorrection.Controls.Add(this.OrdersCorrectionSearchBar);
             this.pOrdersCorrection.Controls.Add(this.splitter3);
             this.pOrdersCorrection.Controls.Add(this.btnRefresh);
@@ -88,29 +88,28 @@ namespace SmayDbEditor.UserInterface.Forms.OrdersCorrection
             this.pOrdersCorrection.Size = new System.Drawing.Size(794, 34);
             this.pOrdersCorrection.TabIndex = 0;
             // 
-            // label1
+            // lblOrderNumber
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(497, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 20);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Numer zamówienia";
+            this.lblOrderNumber.AutoSize = true;
+            this.lblOrderNumber.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblOrderNumber.Location = new System.Drawing.Point(488, 7);
+            this.lblOrderNumber.Name = "lblOrderNumber";
+            this.lblOrderNumber.Size = new System.Drawing.Size(145, 20);
+            this.lblOrderNumber.TabIndex = 7;
+            this.lblOrderNumber.Text = "Numer zamówienia";
             // 
             // OrdersCorrectionSearchBar
             // 
-            this.OrdersCorrectionSearchBar.Location = new System.Drawing.Point(645, 6);
+            this.OrdersCorrectionSearchBar.Location = new System.Drawing.Point(639, 7);
             this.OrdersCorrectionSearchBar.Name = "OrdersCorrectionSearchBar";
             this.OrdersCorrectionSearchBar.Size = new System.Drawing.Size(146, 20);
             this.OrdersCorrectionSearchBar.TabIndex = 6;
-            this.OrdersCorrectionSearchBar.TextChanged += new System.EventHandler(this.OrdersCorrectionSearchBar_TextChanged);
             // 
             // splitter3
             // 
             this.splitter3.Location = new System.Drawing.Point(315, 0);
             this.splitter3.Name = "splitter3";
-            this.splitter3.Size = new System.Drawing.Size(160, 34);
+            this.splitter3.Size = new System.Drawing.Size(167, 34);
             this.splitter3.TabIndex = 5;
             this.splitter3.TabStop = false;
             // 
@@ -295,7 +294,7 @@ namespace SmayDbEditor.UserInterface.Forms.OrdersCorrection
         private System.Windows.Forms.DataGridViewTextBoxColumn col_porel_qty;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_porel_tstamp;
         private System.Windows.Forms.Splitter splitter3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblOrderNumber;
         private System.Windows.Forms.TextBox OrdersCorrectionSearchBar;
     }
 }

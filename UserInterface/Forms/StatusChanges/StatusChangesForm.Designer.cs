@@ -32,6 +32,9 @@ namespace SmayDbEditor.UserInterface.Forms.StatusChanges
             this.components = new System.ComponentModel.Container();
             this.tlpStatusChanges = new System.Windows.Forms.TableLayoutPanel();
             this.pStatusChanges = new System.Windows.Forms.Panel();
+            this.StatusChangesSearchBar = new System.Windows.Forms.TextBox();
+            this.splitter2 = new System.Windows.Forms.Splitter();
+            this.lblOrderNumber = new System.Windows.Forms.Label();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.btnModify = new System.Windows.Forms.Button();
@@ -68,6 +71,9 @@ namespace SmayDbEditor.UserInterface.Forms.StatusChanges
             // pStatusChanges
             // 
             this.pStatusChanges.BackColor = System.Drawing.Color.White;
+            this.pStatusChanges.Controls.Add(this.StatusChangesSearchBar);
+            this.pStatusChanges.Controls.Add(this.splitter2);
+            this.pStatusChanges.Controls.Add(this.lblOrderNumber);
             this.pStatusChanges.Controls.Add(this.btnRefresh);
             this.pStatusChanges.Controls.Add(this.splitter1);
             this.pStatusChanges.Controls.Add(this.btnModify);
@@ -76,6 +82,31 @@ namespace SmayDbEditor.UserInterface.Forms.StatusChanges
             this.pStatusChanges.Name = "pStatusChanges";
             this.pStatusChanges.Size = new System.Drawing.Size(794, 34);
             this.pStatusChanges.TabIndex = 0;
+            // 
+            // StatusChangesSearchBar
+            // 
+            this.StatusChangesSearchBar.Location = new System.Drawing.Point(639, 7);
+            this.StatusChangesSearchBar.Name = "StatusChangesSearchBar";
+            this.StatusChangesSearchBar.Size = new System.Drawing.Size(146, 20);
+            this.StatusChangesSearchBar.TabIndex = 10;
+            // 
+            // splitter2
+            // 
+            this.splitter2.Location = new System.Drawing.Point(230, 0);
+            this.splitter2.Name = "splitter2";
+            this.splitter2.Size = new System.Drawing.Size(252, 34);
+            this.splitter2.TabIndex = 9;
+            this.splitter2.TabStop = false;
+            // 
+            // lblOrderNumber
+            // 
+            this.lblOrderNumber.AutoSize = true;
+            this.lblOrderNumber.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblOrderNumber.Location = new System.Drawing.Point(488, 7);
+            this.lblOrderNumber.Name = "lblOrderNumber";
+            this.lblOrderNumber.Size = new System.Drawing.Size(145, 20);
+            this.lblOrderNumber.TabIndex = 8;
+            this.lblOrderNumber.Text = "Numer zamówienia";
             // 
             // btnRefresh
             // 
@@ -192,6 +223,7 @@ namespace SmayDbEditor.UserInterface.Forms.StatusChanges
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StatusChangesForm_FormClosed);
             this.tlpStatusChanges.ResumeLayout(false);
             this.pStatusChanges.ResumeLayout(false);
+            this.pStatusChanges.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStatusChanges)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsStatusChanges)).EndInit();
             this.ResumeLayout(false);
@@ -212,5 +244,8 @@ namespace SmayDbEditor.UserInterface.Forms.StatusChanges
         private System.Windows.Forms.DataGridViewTextBoxColumn col_imph_tstamp;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_imph_status;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_imph_type;
+        private System.Windows.Forms.Label lblOrderNumber;
+        private System.Windows.Forms.Splitter splitter2;
+        private System.Windows.Forms.TextBox StatusChangesSearchBar;
     }
 }

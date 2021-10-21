@@ -125,23 +125,5 @@ namespace SmayDbEditor.UserInterface.Forms.OrdersCorrection
         }
 
         #endregion
-
-        private void OrdersCorrectionSearchBar_TextChanged(object sender, EventArgs e)
-        {
-            string connString = ConfigurationManager.ConnectionStrings["Local"].ConnectionString;
-            SqlConnection _connection = new SqlConnection(connString);
-
-            string sql = "select * from [dbo].[podet_rel] where porel_pono like = '"+OrdersCorrectionSearchBar.Text+"%'";
-            
-            _connection.Open();
-
-            SqlCommand sqlcomm = new SqlCommand(sql, _connection);
-            SqlDataAdapter sdr = new SqlDataAdapter(sqlcomm);
-            DataTable dt = new DataTable();
-            sdr.Fill(dt);
-            dgvOrdersCorrection.DataSource = dt;
-
-            _connection.Close();
-        }
     }
 }

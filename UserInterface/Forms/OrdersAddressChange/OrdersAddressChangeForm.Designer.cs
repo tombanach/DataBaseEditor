@@ -53,6 +53,9 @@ namespace SmayDbEditor.UserInterface.Forms.OrdersAddressChange
             this.col_DestCountry = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_WayOfDelivery = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bsOrdersAddressChange = new System.Windows.Forms.BindingSource(this.components);
+            this.splitter2 = new System.Windows.Forms.Splitter();
+            this.lblOrderNumber = new System.Windows.Forms.Label();
+            this.OrdersAddressChangeSearchBar = new System.Windows.Forms.TextBox();
             this.tlpOrdersAddressChange.SuspendLayout();
             this.pOrdersAddressChange.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdersAddressChange)).BeginInit();
@@ -77,6 +80,9 @@ namespace SmayDbEditor.UserInterface.Forms.OrdersAddressChange
             // 
             // pOrdersAddressChange
             // 
+            this.pOrdersAddressChange.Controls.Add(this.OrdersAddressChangeSearchBar);
+            this.pOrdersAddressChange.Controls.Add(this.lblOrderNumber);
+            this.pOrdersAddressChange.Controls.Add(this.splitter2);
             this.pOrdersAddressChange.Controls.Add(this.btnRefresh);
             this.pOrdersAddressChange.Controls.Add(this.splitter1);
             this.pOrdersAddressChange.Controls.Add(this.btnModify);
@@ -279,6 +285,31 @@ namespace SmayDbEditor.UserInterface.Forms.OrdersAddressChange
             // 
             this.bsOrdersAddressChange.DataSource = typeof(SmayDbEditor.DataAccessLayer.ViewModel.OrderAddressChangeViewModel);
             // 
+            // splitter2
+            // 
+            this.splitter2.Location = new System.Drawing.Point(235, 0);
+            this.splitter2.Name = "splitter2";
+            this.splitter2.Size = new System.Drawing.Size(247, 34);
+            this.splitter2.TabIndex = 10;
+            this.splitter2.TabStop = false;
+            // 
+            // lblOrderNumber
+            // 
+            this.lblOrderNumber.AutoSize = true;
+            this.lblOrderNumber.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblOrderNumber.Location = new System.Drawing.Point(488, 7);
+            this.lblOrderNumber.Name = "lblOrderNumber";
+            this.lblOrderNumber.Size = new System.Drawing.Size(145, 20);
+            this.lblOrderNumber.TabIndex = 11;
+            this.lblOrderNumber.Text = "Numer zamówienia";
+            // 
+            // OrdersAddressChangeSearchBar
+            // 
+            this.OrdersAddressChangeSearchBar.Location = new System.Drawing.Point(639, 7);
+            this.OrdersAddressChangeSearchBar.Name = "OrdersAddressChangeSearchBar";
+            this.OrdersAddressChangeSearchBar.Size = new System.Drawing.Size(146, 20);
+            this.OrdersAddressChangeSearchBar.TabIndex = 12;
+            // 
             // OrdersAddressChangeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -290,6 +321,7 @@ namespace SmayDbEditor.UserInterface.Forms.OrdersAddressChange
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.OrdersAddressChangeForm_FormClosed);
             this.tlpOrdersAddressChange.ResumeLayout(false);
             this.pOrdersAddressChange.ResumeLayout(false);
+            this.pOrdersAddressChange.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdersAddressChange)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsOrdersAddressChange)).EndInit();
             this.ResumeLayout(false);
@@ -321,5 +353,8 @@ namespace SmayDbEditor.UserInterface.Forms.OrdersAddressChange
         private System.Windows.Forms.DataGridViewTextBoxColumn col_DestAddress;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_DestCountry;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_WayOfDelivery;
+        private System.Windows.Forms.Splitter splitter2;
+        private System.Windows.Forms.Label lblOrderNumber;
+        private System.Windows.Forms.TextBox OrdersAddressChangeSearchBar;
     }
 }
