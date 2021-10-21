@@ -5,7 +5,9 @@ using SmayDbEditor.UserInterface.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -126,18 +128,20 @@ namespace SmayDbEditor.UserInterface.Forms.OrdersCorrection
 
         private void OrdersCorrectionSearchBar_TextChanged(object sender, EventArgs e)
         {
-            //string mainconn = ConfigurationManager.ConnectionString["MyCONN"].ConnectionString;
-            //SqlConnection sqlconn = new SqlConnection(mainconn);
+            string connString = ConfigurationManager.ConnectionStrings["Local"].ConnectionString;
+            SqlConnection _connection = new SqlConnection(connString);
 
-            string sqlquery = "select * from [dbo].[podet_rel] where porel_pono like = '"+OrdersCorrectionSearchBar+"%'";
-            //sqlconn.Open();
+            string sql = "select * from [dbo].[podet_rel] where porel_pono like = '"+OrdersCorrectionSearchBar.Text+"%'";
+            
+            _connection.Open();
 
-            //SqlCommand sqlcomm = new SqlCommand(sqlquery, sqlconn);
-            //SqlDataAdapter sdr = new SqlDataAdapter(sqlcomm);
-            //DataTable dt = new DataTable();
-            //sdr.Fill(dt);
-            //dataGridView1.DataSource = dt;
-            //sqlconn.Close();
+            SqlCommand sqlcomm = new SqlCommand(sql, _connection);
+            SqlDataAdapter sdr = new SqlDataAdapter(sqlcomm);
+            DataTable dt = new DataTable();
+            sdr.Fill(dt);
+            dgvOrdersCorrection.DataSource = dt;
+
+            _connection.Close();
         }
     }
 }
