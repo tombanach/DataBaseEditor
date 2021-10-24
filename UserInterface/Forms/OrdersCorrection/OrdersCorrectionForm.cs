@@ -131,7 +131,7 @@ namespace SmayDbEditor.UserInterface.Forms.OrdersCorrection
         {
             var mainconn = ConfigurationManager.ConnectionStrings["Local"].ConnectionString;
             SqlConnection sqlconn = new SqlConnection(mainconn);
-            var sql = "select * form [dbo].[podet_rel] where porel_id like '" + OrdersCorrectionSearchBar.Text + "%'";
+            var sql = "select * from [dbo].[podet_rel] where porel_id like '" + OrdersCorrectionSearchBar.Text + "%'";
 
             sqlconn.Open();
             SqlCommand sqlcomm = new SqlCommand(sql, sqlconn);
