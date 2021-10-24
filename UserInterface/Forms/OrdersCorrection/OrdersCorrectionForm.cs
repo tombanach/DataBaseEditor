@@ -1,4 +1,5 @@
-﻿using SmayDbEditor.DataAccessLayer.ViewModel;
+﻿using MySql.Data.MySqlClient;
+using SmayDbEditor.DataAccessLayer.ViewModel;
 using SmayDbEditor.UserInterface.Classes;
 using SmayDbEditor.UserInterface.Forms.Base;
 using SmayDbEditor.UserInterface.Helpers;
@@ -125,5 +126,20 @@ namespace SmayDbEditor.UserInterface.Forms.OrdersCorrection
         }
 
         #endregion
+
+        private void OrdersCorrectionSearchBar_TextChanged(object sender, EventArgs e)
+        {
+            var mainconn = ConfigurationManager.ConnectionStrings["Local"].ConnectionString;
+            SqlConnection sqlconn = new SqlConnection(mainconn);
+            var sql = "select * form [dbo].[podet_rel] where porel_id like '" + OrdersCorrectionSearchBar.Text + "%'";
+
+            sqlconn.Open();
+            SqlCommand sqlcomm = new SqlCommand(sql, sqlconn);
+            SqlDataAdapter sdr = new SqlDataAdapter(sqlcomm);
+            DataTable dt = new DataTable();
+            sdr.Fill(dt);
+            bsOrdersCorrection.DataSource = dt;
+            sqlconn.Close();
+        }
     }
 }

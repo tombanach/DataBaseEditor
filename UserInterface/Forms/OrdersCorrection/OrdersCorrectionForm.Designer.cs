@@ -104,6 +104,7 @@ namespace SmayDbEditor.UserInterface.Forms.OrdersCorrection
             this.OrdersCorrectionSearchBar.Name = "OrdersCorrectionSearchBar";
             this.OrdersCorrectionSearchBar.Size = new System.Drawing.Size(146, 20);
             this.OrdersCorrectionSearchBar.TabIndex = 6;
+            this.OrdersCorrectionSearchBar.TextChanged += new System.EventHandler(this.OrdersCorrectionSearchBar_TextChanged);
             // 
             // splitter3
             // 
