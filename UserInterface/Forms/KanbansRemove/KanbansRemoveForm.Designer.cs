@@ -32,6 +32,9 @@ namespace SmayDbEditor.UserInterface.Forms.KanbansRemove
             this.components = new System.ComponentModel.Container();
             this.tlpKanbansRemove = new System.Windows.Forms.TableLayoutPanel();
             this.pKanbansRemove = new System.Windows.Forms.Panel();
+            this.KanbansRemoveSearchBar = new System.Windows.Forms.TextBox();
+            this.lblKanbanNumber = new System.Windows.Forms.Label();
+            this.splitter2 = new System.Windows.Forms.Splitter();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.btnRemove = new System.Windows.Forms.Button();
@@ -44,9 +47,6 @@ namespace SmayDbEditor.UserInterface.Forms.KanbansRemove
             this.col_kbtr_status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_kbtr_tstamp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bsKanbansRemove = new System.Windows.Forms.BindingSource(this.components);
-            this.splitter2 = new System.Windows.Forms.Splitter();
-            this.lblKanbanNumber = new System.Windows.Forms.Label();
-            this.KanbansRemoveSearchBar = new System.Windows.Forms.TextBox();
             this.tlpKanbansRemove.SuspendLayout();
             this.pKanbansRemove.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKanbansRemove)).BeginInit();
@@ -82,6 +82,32 @@ namespace SmayDbEditor.UserInterface.Forms.KanbansRemove
             this.pKanbansRemove.Name = "pKanbansRemove";
             this.pKanbansRemove.Size = new System.Drawing.Size(794, 34);
             this.pKanbansRemove.TabIndex = 0;
+            // 
+            // KanbansRemoveSearchBar
+            // 
+            this.KanbansRemoveSearchBar.Location = new System.Drawing.Point(639, 7);
+            this.KanbansRemoveSearchBar.Name = "KanbansRemoveSearchBar";
+            this.KanbansRemoveSearchBar.Size = new System.Drawing.Size(146, 20);
+            this.KanbansRemoveSearchBar.TabIndex = 12;
+            this.KanbansRemoveSearchBar.TextChanged += new System.EventHandler(this.KanbansRemoveSearchBar_TextChanged);
+            // 
+            // lblKanbanNumber
+            // 
+            this.lblKanbanNumber.AutoSize = true;
+            this.lblKanbanNumber.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblKanbanNumber.Location = new System.Drawing.Point(512, 7);
+            this.lblKanbanNumber.Name = "lblKanbanNumber";
+            this.lblKanbanNumber.Size = new System.Drawing.Size(121, 20);
+            this.lblKanbanNumber.TabIndex = 11;
+            this.lblKanbanNumber.Text = "Numer kanbana";
+            // 
+            // splitter2
+            // 
+            this.splitter2.Location = new System.Drawing.Point(240, 0);
+            this.splitter2.Name = "splitter2";
+            this.splitter2.Size = new System.Drawing.Size(266, 34);
+            this.splitter2.TabIndex = 10;
+            this.splitter2.TabStop = false;
             // 
             // btnRefresh
             // 
@@ -202,31 +228,6 @@ namespace SmayDbEditor.UserInterface.Forms.KanbansRemove
             // bsKanbansRemove
             // 
             this.bsKanbansRemove.DataSource = typeof(SmayDbEditor.DataAccessLayer.ViewModel.KanbanRemoveViewModel);
-            // 
-            // splitter2
-            // 
-            this.splitter2.Location = new System.Drawing.Point(240, 0);
-            this.splitter2.Name = "splitter2";
-            this.splitter2.Size = new System.Drawing.Size(266, 34);
-            this.splitter2.TabIndex = 10;
-            this.splitter2.TabStop = false;
-            // 
-            // lblKanbanNumber
-            // 
-            this.lblKanbanNumber.AutoSize = true;
-            this.lblKanbanNumber.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblKanbanNumber.Location = new System.Drawing.Point(512, 7);
-            this.lblKanbanNumber.Name = "lblKanbanNumber";
-            this.lblKanbanNumber.Size = new System.Drawing.Size(121, 20);
-            this.lblKanbanNumber.TabIndex = 11;
-            this.lblKanbanNumber.Text = "Numer kanbana";
-            // 
-            // KanbansRemoveSearchBar
-            // 
-            this.KanbansRemoveSearchBar.Location = new System.Drawing.Point(639, 7);
-            this.KanbansRemoveSearchBar.Name = "KanbansRemoveSearchBar";
-            this.KanbansRemoveSearchBar.Size = new System.Drawing.Size(146, 20);
-            this.KanbansRemoveSearchBar.TabIndex = 12;
             // 
             // KanbansRemoveForm
             // 

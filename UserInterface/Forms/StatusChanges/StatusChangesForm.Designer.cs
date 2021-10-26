@@ -89,6 +89,7 @@ namespace SmayDbEditor.UserInterface.Forms.StatusChanges
             this.StatusChangesSearchBar.Name = "StatusChangesSearchBar";
             this.StatusChangesSearchBar.Size = new System.Drawing.Size(146, 20);
             this.StatusChangesSearchBar.TabIndex = 10;
+            this.StatusChangesSearchBar.TextChanged += new System.EventHandler(this.StatusChangesSearchBar_TextChanged);
             // 
             // splitter2
             // 

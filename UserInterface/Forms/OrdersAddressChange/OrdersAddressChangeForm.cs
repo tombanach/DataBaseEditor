@@ -6,7 +6,9 @@ using SmayDbEditor.UserInterface.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -114,5 +116,20 @@ namespace SmayDbEditor.UserInterface.Forms.OrdersAddressChange
         }
 
         #endregion
+
+        private void OrdersAddressChangeSearchBar_TextChanged(object sender, EventArgs e)
+        {
+            var mainconn = ConfigurationManager.ConnectionStrings["Local"].ConnectionString;
+            SqlConnection sqlconn = new SqlConnection(mainconn);
+            var sql = "select * from [dbo].[sodet] where SOno like '" + OrdersAddressChangeSearchBar.Text + "%'";
+
+            sqlconn.Open();
+            SqlCommand sqlcomm = new SqlCommand(sql, sqlconn);
+            SqlDataAdapter sdr = new SqlDataAdapter(sqlcomm);
+            DataTable dt = new DataTable();
+            sdr.Fill(dt);
+            bsOrdersAddressChange.DataSource = dt;
+            sqlconn.Close();
+        }
     }
 }

@@ -32,6 +32,9 @@ namespace SmayDbEditor.UserInterface.Forms.OrdersAddressChange
             this.components = new System.ComponentModel.Container();
             this.tlpOrdersAddressChange = new System.Windows.Forms.TableLayoutPanel();
             this.pOrdersAddressChange = new System.Windows.Forms.Panel();
+            this.OrdersAddressChangeSearchBar = new System.Windows.Forms.TextBox();
+            this.lblOrderNumber = new System.Windows.Forms.Label();
+            this.splitter2 = new System.Windows.Forms.Splitter();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.btnModify = new System.Windows.Forms.Button();
@@ -53,9 +56,6 @@ namespace SmayDbEditor.UserInterface.Forms.OrdersAddressChange
             this.col_DestCountry = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_WayOfDelivery = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bsOrdersAddressChange = new System.Windows.Forms.BindingSource(this.components);
-            this.splitter2 = new System.Windows.Forms.Splitter();
-            this.lblOrderNumber = new System.Windows.Forms.Label();
-            this.OrdersAddressChangeSearchBar = new System.Windows.Forms.TextBox();
             this.tlpOrdersAddressChange.SuspendLayout();
             this.pOrdersAddressChange.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdersAddressChange)).BeginInit();
@@ -91,6 +91,32 @@ namespace SmayDbEditor.UserInterface.Forms.OrdersAddressChange
             this.pOrdersAddressChange.Name = "pOrdersAddressChange";
             this.pOrdersAddressChange.Size = new System.Drawing.Size(794, 34);
             this.pOrdersAddressChange.TabIndex = 0;
+            // 
+            // OrdersAddressChangeSearchBar
+            // 
+            this.OrdersAddressChangeSearchBar.Location = new System.Drawing.Point(639, 7);
+            this.OrdersAddressChangeSearchBar.Name = "OrdersAddressChangeSearchBar";
+            this.OrdersAddressChangeSearchBar.Size = new System.Drawing.Size(146, 20);
+            this.OrdersAddressChangeSearchBar.TabIndex = 12;
+            this.OrdersAddressChangeSearchBar.TextChanged += new System.EventHandler(this.OrdersAddressChangeSearchBar_TextChanged);
+            // 
+            // lblOrderNumber
+            // 
+            this.lblOrderNumber.AutoSize = true;
+            this.lblOrderNumber.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblOrderNumber.Location = new System.Drawing.Point(488, 7);
+            this.lblOrderNumber.Name = "lblOrderNumber";
+            this.lblOrderNumber.Size = new System.Drawing.Size(145, 20);
+            this.lblOrderNumber.TabIndex = 11;
+            this.lblOrderNumber.Text = "Numer zamówienia";
+            // 
+            // splitter2
+            // 
+            this.splitter2.Location = new System.Drawing.Point(235, 0);
+            this.splitter2.Name = "splitter2";
+            this.splitter2.Size = new System.Drawing.Size(247, 34);
+            this.splitter2.TabIndex = 10;
+            this.splitter2.TabStop = false;
             // 
             // btnRefresh
             // 
@@ -284,31 +310,6 @@ namespace SmayDbEditor.UserInterface.Forms.OrdersAddressChange
             // bsOrdersAddressChange
             // 
             this.bsOrdersAddressChange.DataSource = typeof(SmayDbEditor.DataAccessLayer.ViewModel.OrderAddressChangeViewModel);
-            // 
-            // splitter2
-            // 
-            this.splitter2.Location = new System.Drawing.Point(235, 0);
-            this.splitter2.Name = "splitter2";
-            this.splitter2.Size = new System.Drawing.Size(247, 34);
-            this.splitter2.TabIndex = 10;
-            this.splitter2.TabStop = false;
-            // 
-            // lblOrderNumber
-            // 
-            this.lblOrderNumber.AutoSize = true;
-            this.lblOrderNumber.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblOrderNumber.Location = new System.Drawing.Point(488, 7);
-            this.lblOrderNumber.Name = "lblOrderNumber";
-            this.lblOrderNumber.Size = new System.Drawing.Size(145, 20);
-            this.lblOrderNumber.TabIndex = 11;
-            this.lblOrderNumber.Text = "Numer zamówienia";
-            // 
-            // OrdersAddressChangeSearchBar
-            // 
-            this.OrdersAddressChangeSearchBar.Location = new System.Drawing.Point(639, 7);
-            this.OrdersAddressChangeSearchBar.Name = "OrdersAddressChangeSearchBar";
-            this.OrdersAddressChangeSearchBar.Size = new System.Drawing.Size(146, 20);
-            this.OrdersAddressChangeSearchBar.TabIndex = 12;
             // 
             // OrdersAddressChangeForm
             // 
