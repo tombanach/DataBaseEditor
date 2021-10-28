@@ -130,6 +130,12 @@
     <Compile Include="Forms\KanbansRemove\KanbansRemoveForm.Designer.cs">
       <DependentUpon>KanbansRemoveForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Logs\LogsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Logs\LogsForm.Designer.cs">
+      <DependentUpon>LogsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +208,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\KanbansRemove\KanbansRemoveForm.resx">
       <DependentUpon>KanbansRemoveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Logs\LogsForm.resx">
+      <DependentUpon>LogsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
