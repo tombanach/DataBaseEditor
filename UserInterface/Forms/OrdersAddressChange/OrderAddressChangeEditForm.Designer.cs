@@ -56,7 +56,7 @@ namespace SmayDbEditor.UserInterface.Forms.OrdersAddressChange
             this.lblOrderAddressChange.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblOrderAddressChange.Location = new System.Drawing.Point(32, 28);
             this.lblOrderAddressChange.Name = "lblOrderAddressChange";
-            this.lblOrderAddressChange.Size = new System.Drawing.Size(266, 32);
+            this.lblOrderAddressChange.Size = new System.Drawing.Size(265, 32);
             this.lblOrderAddressChange.TabIndex = 0;
             this.lblOrderAddressChange.Text = "Zmiana adresu dostawy";
             // 
@@ -66,29 +66,29 @@ namespace SmayDbEditor.UserInterface.Forms.OrdersAddressChange
             this.lbl_SOno.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lbl_SOno.Location = new System.Drawing.Point(14, 33);
             this.lbl_SOno.Name = "lbl_SOno";
-            this.lbl_SOno.Size = new System.Drawing.Size(41, 17);
+            this.lbl_SOno.Size = new System.Drawing.Size(100, 17);
             this.lbl_SOno.TabIndex = 1;
-            this.lbl_SOno.Text = "SOno";
+            this.lbl_SOno.Text = "Nr zamówienia";
             // 
             // lbl_DestAddress
             // 
             this.lbl_DestAddress.AutoSize = true;
             this.lbl_DestAddress.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lbl_DestAddress.Location = new System.Drawing.Point(16, 118);
+            this.lbl_DestAddress.Location = new System.Drawing.Point(14, 118);
             this.lbl_DestAddress.Name = "lbl_DestAddress";
-            this.lbl_DestAddress.Size = new System.Drawing.Size(85, 17);
+            this.lbl_DestAddress.Size = new System.Drawing.Size(98, 17);
             this.lbl_DestAddress.TabIndex = 2;
-            this.lbl_DestAddress.Text = "DestAddress";
+            this.lbl_DestAddress.Text = "Adres dostawy";
             // 
             // lbl_CustCode
             // 
             this.lbl_CustCode.AutoSize = true;
             this.lbl_CustCode.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lbl_CustCode.Location = new System.Drawing.Point(15, 33);
+            this.lbl_CustCode.Location = new System.Drawing.Point(14, 33);
             this.lbl_CustCode.Name = "lbl_CustCode";
             this.lbl_CustCode.Size = new System.Drawing.Size(64, 17);
             this.lbl_CustCode.TabIndex = 3;
-            this.lbl_CustCode.Text = "CustCode";
+            this.lbl_CustCode.Text = "Nr klienta";
             // 
             // lbl_ItemCode
             // 
@@ -96,9 +96,9 @@ namespace SmayDbEditor.UserInterface.Forms.OrdersAddressChange
             this.lbl_ItemCode.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lbl_ItemCode.Location = new System.Drawing.Point(14, 75);
             this.lbl_ItemCode.Name = "lbl_ItemCode";
-            this.lbl_ItemCode.Size = new System.Drawing.Size(64, 17);
+            this.lbl_ItemCode.Size = new System.Drawing.Size(76, 17);
             this.lbl_ItemCode.TabIndex = 4;
-            this.lbl_ItemCode.Text = "ItemCode";
+            this.lbl_ItemCode.Text = "Kod towaru";
             // 
             // lbl_textline1
             // 
@@ -106,25 +106,25 @@ namespace SmayDbEditor.UserInterface.Forms.OrdersAddressChange
             this.lbl_textline1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lbl_textline1.Location = new System.Drawing.Point(14, 118);
             this.lbl_textline1.Name = "lbl_textline1";
-            this.lbl_textline1.Size = new System.Drawing.Size(56, 17);
+            this.lbl_textline1.Size = new System.Drawing.Size(91, 17);
             this.lbl_textline1.TabIndex = 5;
-            this.lbl_textline1.Text = "textline1";
+            this.lbl_textline1.Text = "Nazwa towaru";
             // 
             // lbl_orddate
             // 
             this.lbl_orddate.AutoSize = true;
             this.lbl_orddate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lbl_orddate.Location = new System.Drawing.Point(16, 78);
+            this.lbl_orddate.Location = new System.Drawing.Point(14, 75);
             this.lbl_orddate.Name = "lbl_orddate";
-            this.lbl_orddate.Size = new System.Drawing.Size(55, 17);
+            this.lbl_orddate.Size = new System.Drawing.Size(66, 17);
             this.lbl_orddate.TabIndex = 6;
-            this.lbl_orddate.Text = "orddate";
+            this.lbl_orddate.Text = "Data zam.";
             // 
             // txt_SOno
             // 
             this.txt_SOno.Enabled = false;
             this.txt_SOno.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txt_SOno.Location = new System.Drawing.Point(115, 30);
+            this.txt_SOno.Location = new System.Drawing.Point(120, 30);
             this.txt_SOno.Name = "txt_SOno";
             this.txt_SOno.Size = new System.Drawing.Size(149, 25);
             this.txt_SOno.TabIndex = 7;
@@ -133,7 +133,7 @@ namespace SmayDbEditor.UserInterface.Forms.OrdersAddressChange
             // 
             this.txt_CustCode.Enabled = false;
             this.txt_CustCode.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txt_CustCode.Location = new System.Drawing.Point(107, 30);
+            this.txt_CustCode.Location = new System.Drawing.Point(118, 30);
             this.txt_CustCode.Name = "txt_CustCode";
             this.txt_CustCode.Size = new System.Drawing.Size(149, 25);
             this.txt_CustCode.TabIndex = 8;
@@ -142,7 +142,7 @@ namespace SmayDbEditor.UserInterface.Forms.OrdersAddressChange
             // 
             this.txt_ItemCode.Enabled = false;
             this.txt_ItemCode.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txt_ItemCode.Location = new System.Drawing.Point(115, 72);
+            this.txt_ItemCode.Location = new System.Drawing.Point(120, 72);
             this.txt_ItemCode.Name = "txt_ItemCode";
             this.txt_ItemCode.Size = new System.Drawing.Size(149, 25);
             this.txt_ItemCode.TabIndex = 9;
@@ -151,7 +151,7 @@ namespace SmayDbEditor.UserInterface.Forms.OrdersAddressChange
             // 
             this.txt_textline1.Enabled = false;
             this.txt_textline1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txt_textline1.Location = new System.Drawing.Point(115, 115);
+            this.txt_textline1.Location = new System.Drawing.Point(120, 115);
             this.txt_textline1.Name = "txt_textline1";
             this.txt_textline1.Size = new System.Drawing.Size(149, 25);
             this.txt_textline1.TabIndex = 10;
@@ -159,9 +159,9 @@ namespace SmayDbEditor.UserInterface.Forms.OrdersAddressChange
             // txt_DestAddress
             // 
             this.txt_DestAddress.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txt_DestAddress.Location = new System.Drawing.Point(107, 115);
+            this.txt_DestAddress.Location = new System.Drawing.Point(118, 115);
             this.txt_DestAddress.Name = "txt_DestAddress";
-            this.txt_DestAddress.Size = new System.Drawing.Size(192, 25);
+            this.txt_DestAddress.Size = new System.Drawing.Size(181, 25);
             this.txt_DestAddress.TabIndex = 12;
             // 
             // gbArticle
@@ -187,7 +187,7 @@ namespace SmayDbEditor.UserInterface.Forms.OrdersAddressChange
             this.dtp_orddate.Enabled = false;
             this.dtp_orddate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.dtp_orddate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_orddate.Location = new System.Drawing.Point(107, 72);
+            this.dtp_orddate.Location = new System.Drawing.Point(118, 72);
             this.dtp_orddate.Name = "dtp_orddate";
             this.dtp_orddate.Size = new System.Drawing.Size(149, 25);
             this.dtp_orddate.TabIndex = 13;

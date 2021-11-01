@@ -115,8 +115,6 @@ namespace SmayDbEditor.UserInterface.Forms.StatusChanges
             RefreshGrid();
         }
 
-        #endregion
-
         private void StatusChangesSearchBar_TextChanged(object sender, EventArgs e)
         {
             var mainconn = ConfigurationManager.ConnectionStrings["Local"].ConnectionString;
@@ -131,5 +129,13 @@ namespace SmayDbEditor.UserInterface.Forms.StatusChanges
             bsStatusChanges.DataSource = dt;
             sqlconn.Close();
         }
+
+        private void btnStatusChangeInfo_Click(object sender, EventArgs e)
+        {
+            StatusChangeInfoForm statusChangeInfoForm = new StatusChangeInfoForm();
+            statusChangeInfoForm.Show();
+        }
+
+        #endregion
     }
 }

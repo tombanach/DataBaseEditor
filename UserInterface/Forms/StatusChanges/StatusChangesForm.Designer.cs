@@ -32,6 +32,7 @@ namespace SmayDbEditor.UserInterface.Forms.StatusChanges
             this.components = new System.ComponentModel.Container();
             this.tlpStatusChanges = new System.Windows.Forms.TableLayoutPanel();
             this.pStatusChanges = new System.Windows.Forms.Panel();
+            this.btnStatusChangeInfo = new System.Windows.Forms.Button();
             this.StatusChangesSearchBar = new System.Windows.Forms.TextBox();
             this.splitter2 = new System.Windows.Forms.Splitter();
             this.lblOrderNumber = new System.Windows.Forms.Label();
@@ -71,6 +72,7 @@ namespace SmayDbEditor.UserInterface.Forms.StatusChanges
             // pStatusChanges
             // 
             this.pStatusChanges.BackColor = System.Drawing.Color.White;
+            this.pStatusChanges.Controls.Add(this.btnStatusChangeInfo);
             this.pStatusChanges.Controls.Add(this.StatusChangesSearchBar);
             this.pStatusChanges.Controls.Add(this.splitter2);
             this.pStatusChanges.Controls.Add(this.lblOrderNumber);
@@ -82,6 +84,20 @@ namespace SmayDbEditor.UserInterface.Forms.StatusChanges
             this.pStatusChanges.Name = "pStatusChanges";
             this.pStatusChanges.Size = new System.Drawing.Size(794, 34);
             this.pStatusChanges.TabIndex = 0;
+            // 
+            // btnStatusChangeInfo
+            // 
+            this.btnStatusChangeInfo.BackColor = System.Drawing.Color.White;
+            this.btnStatusChangeInfo.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnStatusChangeInfo.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnStatusChangeInfo.ForeColor = System.Drawing.Color.Fuchsia;
+            this.btnStatusChangeInfo.Location = new System.Drawing.Point(293, 0);
+            this.btnStatusChangeInfo.Name = "btnStatusChangeInfo";
+            this.btnStatusChangeInfo.Size = new System.Drawing.Size(31, 34);
+            this.btnStatusChangeInfo.TabIndex = 11;
+            this.btnStatusChangeInfo.Text = "?";
+            this.btnStatusChangeInfo.UseVisualStyleBackColor = false;
+            this.btnStatusChangeInfo.Click += new System.EventHandler(this.btnStatusChangeInfo_Click);
             // 
             // StatusChangesSearchBar
             // 
@@ -95,7 +111,7 @@ namespace SmayDbEditor.UserInterface.Forms.StatusChanges
             // 
             this.splitter2.Location = new System.Drawing.Point(230, 0);
             this.splitter2.Name = "splitter2";
-            this.splitter2.Size = new System.Drawing.Size(252, 34);
+            this.splitter2.Size = new System.Drawing.Size(63, 34);
             this.splitter2.TabIndex = 9;
             this.splitter2.TabStop = false;
             // 
@@ -248,5 +264,6 @@ namespace SmayDbEditor.UserInterface.Forms.StatusChanges
         private System.Windows.Forms.Label lblOrderNumber;
         private System.Windows.Forms.Splitter splitter2;
         private System.Windows.Forms.TextBox StatusChangesSearchBar;
+        private System.Windows.Forms.Button btnStatusChangeInfo;
     }
 }
