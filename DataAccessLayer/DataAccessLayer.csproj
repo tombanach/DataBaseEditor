@@ -74,6 +74,7 @@
     <Compile Include="Interfaces\IStatusChangeRepository.cs" />
     <Compile Include="Models\EntityModel.cs" />
     <Compile Include="Models\KanbanRemoveModel.cs" />
+    <Compile Include="Models\LogModel.cs" />
     <Compile Include="Models\OrderAddressChangeModel.cs" />
     <Compile Include="Models\OrderCorrectionModel.cs" />
     <Compile Include="Models\PrinterAddingModel.cs" />

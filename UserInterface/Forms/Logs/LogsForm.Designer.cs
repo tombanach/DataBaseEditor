@@ -34,8 +34,10 @@
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dgvLogs = new System.Windows.Forms.DataGridView();
             this.tlpLogs.SuspendLayout();
             this.pLogs.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLogs)).BeginInit();
             this.SuspendLayout();
             // 
             // tlpLogs
@@ -44,6 +46,7 @@
             this.tlpLogs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpLogs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpLogs.Controls.Add(this.pLogs, 0, 0);
+            this.tlpLogs.Controls.Add(this.dgvLogs, 0, 1);
             this.tlpLogs.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpLogs.Location = new System.Drawing.Point(0, 0);
             this.tlpLogs.Name = "tlpLogs";
@@ -106,6 +109,19 @@
             this.textBox1.Size = new System.Drawing.Size(152, 27);
             this.textBox1.TabIndex = 3;
             // 
+            // dgvLogs
+            // 
+            this.dgvLogs.AllowUserToAddRows = false;
+            this.dgvLogs.AllowUserToDeleteRows = false;
+            this.dgvLogs.BackgroundColor = System.Drawing.Color.White;
+            this.dgvLogs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLogs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvLogs.Location = new System.Drawing.Point(3, 43);
+            this.dgvLogs.Name = "dgvLogs";
+            this.dgvLogs.ReadOnly = true;
+            this.dgvLogs.Size = new System.Drawing.Size(655, 409);
+            this.dgvLogs.TabIndex = 1;
+            // 
             // LogsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -118,6 +134,7 @@
             this.tlpLogs.ResumeLayout(false);
             this.pLogs.ResumeLayout(false);
             this.pLogs.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLogs)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -130,5 +147,6 @@
         private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dgvLogs;
     }
 }
