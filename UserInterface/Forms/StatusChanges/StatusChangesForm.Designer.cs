@@ -93,7 +93,7 @@ namespace SmayDbEditor.UserInterface.Forms.StatusChanges
             this.btnStatusChangeInfo.ForeColor = System.Drawing.Color.Fuchsia;
             this.btnStatusChangeInfo.Location = new System.Drawing.Point(293, 0);
             this.btnStatusChangeInfo.Name = "btnStatusChangeInfo";
-            this.btnStatusChangeInfo.Size = new System.Drawing.Size(31, 34);
+            this.btnStatusChangeInfo.Size = new System.Drawing.Size(34, 34);
             this.btnStatusChangeInfo.TabIndex = 11;
             this.btnStatusChangeInfo.Text = "?";
             this.btnStatusChangeInfo.UseVisualStyleBackColor = false;
