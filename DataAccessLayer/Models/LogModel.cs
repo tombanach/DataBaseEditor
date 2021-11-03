@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace SmayDbEditor.DataAccessLayer.Models
 {
-    public class LogModel
+    public class LogModel : EntityModel
     {
-        public int log_num { get; set; }
-        public string log_descr { get; set; }
-        public DateTime log_tstamp { get; set; }
-        public int log_error { get; set; }
+        public string Log_Num { get; set; }
+        public string Log_Descr { get; set; }
+        public DateTime Log_Tstamp { get; set; }
+        public string Log_Error { get; set; }
     }
 }

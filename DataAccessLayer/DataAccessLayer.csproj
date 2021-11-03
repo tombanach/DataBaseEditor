@@ -69,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interfaces\IKanbanRemoveRepository.cs" />
+    <Compile Include="Interfaces\ILogRepository.cs" />
     <Compile Include="Interfaces\IOrderAddressChangeRepository.cs" />
     <Compile Include="Interfaces\IOrderCorrectionRepository.cs" />
     <Compile Include="Interfaces\IStatusChangeRepository.cs" />
@@ -85,6 +86,7 @@
     <Compile Include="Repository\OrderCorrectionRepository.cs" />
     <Compile Include="Repository\StatusChangeRepository.cs" />
     <Compile Include="ViewModel\KanbanRemoveViewModel.cs" />
+    <Compile Include="ViewModel\LogViewModel.cs" />
     <Compile Include="ViewModel\OrderAddressChangeViewModel.cs" />
     <Compile Include="ViewModel\OrderCorrectionViewModel.cs" />
     <Compile Include="ViewModel\PrinterAddingViewModel.cs" />

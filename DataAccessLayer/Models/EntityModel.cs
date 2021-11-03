@@ -13,5 +13,6 @@ namespace SmayDbEditor.DataAccessLayer.Models
         public int kbtr_id { get; set; } //KanbansRemove
         public int SOid { get; set; } //OrdersAddressChange
         public int id { get; set; } //PrintersAdding
+        public int log_id { get; set; } //Logi
     }
 }
