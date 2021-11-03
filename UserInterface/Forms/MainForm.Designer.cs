@@ -46,7 +46,7 @@ namespace SmayDbEditor.UserInterface.Forms
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.btnOrdersCorrection = new System.Windows.Forms.Button();
             this.tpStatistics = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnLogs = new System.Windows.Forms.Button();
             this.splitter8 = new System.Windows.Forms.Splitter();
             this.button1 = new System.Windows.Forms.Button();
             this.pMain = new System.Windows.Forms.Panel();
@@ -221,7 +221,7 @@ namespace SmayDbEditor.UserInterface.Forms
             // 
             // tpStatistics
             // 
-            this.tpStatistics.Controls.Add(this.button2);
+            this.tpStatistics.Controls.Add(this.btnLogs);
             this.tpStatistics.Controls.Add(this.splitter8);
             this.tpStatistics.Controls.Add(this.button1);
             this.tpStatistics.Location = new System.Drawing.Point(4, 24);
@@ -232,16 +232,17 @@ namespace SmayDbEditor.UserInterface.Forms
             this.tpStatistics.Text = "Statystyki";
             this.tpStatistics.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnLogs
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.Location = new System.Drawing.Point(3, 46);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(125, 40);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Logi";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnLogs.BackColor = System.Drawing.Color.White;
+            this.btnLogs.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLogs.Location = new System.Drawing.Point(3, 46);
+            this.btnLogs.Name = "btnLogs";
+            this.btnLogs.Size = new System.Drawing.Size(125, 40);
+            this.btnLogs.TabIndex = 2;
+            this.btnLogs.Text = "Logi";
+            this.btnLogs.UseVisualStyleBackColor = false;
+            this.btnLogs.Click += new System.EventHandler(this.btnLogs_Click);
             // 
             // splitter8
             // 
@@ -330,7 +331,7 @@ namespace SmayDbEditor.UserInterface.Forms
         private System.Windows.Forms.ToolStripStatusLabel tsslVersion;
         private System.Windows.Forms.ToolStripStatusLabel tsslDatabase;
         private System.Windows.Forms.ToolStripStatusLabel tsslUser;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnLogs;
         private System.Windows.Forms.Splitter splitter8;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TabControl tcTabs;

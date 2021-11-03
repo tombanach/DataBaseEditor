@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using SmayDbEditor.UserInterface.Forms.KanbansRemove;
 using SmayDbEditor.UserInterface.Forms.OrdersAddressChange;
 using SmayDbEditor.UserInterface.Forms.PrintersAdding;
+using SmayDbEditor.UserInterface.Forms.Logs;
 
 namespace SmayDbEditor.UserInterface.Forms
 {
@@ -25,6 +26,7 @@ namespace SmayDbEditor.UserInterface.Forms
         private TabPage _tpKanbansRemove;
         private TabPage _tpOrdersAddressChange;
         private TabPage _tpPrintersAdding;
+        //private TabPage _tpLogs;
         //private TabPage _tpCancelWzDoc;
 
         #endregion
@@ -101,6 +103,19 @@ namespace SmayDbEditor.UserInterface.Forms
                 tcTabs.SelectedTab = _tpPrintersAdding;
             }
         }
+
+        //private void btnLogs_Click(object sender, EventArgs e)
+        //{
+        //    if (LogsForm.IsNull)
+        //    {
+        //        _tpLogs = new TabPage();
+        //        ShowFormInTabPage(_tpLogs, LogsForm.Instance);
+        //    }
+        //    else
+        //    {
+        //        tcTabs.SelectedTab = _tpLogs;
+        //    }
+        //}
 
 
         // Red X button to close tabs on MainForm
