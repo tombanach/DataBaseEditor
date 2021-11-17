@@ -125,8 +125,6 @@ namespace SmayDbEditor.UserInterface.Forms.OrdersCorrection
             RefreshGrid();
         }
 
-        #endregion
-
         private void OrdersCorrectionSearchBar_TextChanged(object sender, EventArgs e)
         {
             var mainconn = ConfigurationManager.ConnectionStrings["Local"].ConnectionString;
@@ -140,6 +138,8 @@ namespace SmayDbEditor.UserInterface.Forms.OrdersCorrection
             sdr.Fill(dt);
             bsOrdersCorrection.DataSource = dt;
             sqlconn.Close();
-        }                      
+        }
+
+        #endregion
     }
 }

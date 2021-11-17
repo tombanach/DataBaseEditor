@@ -227,6 +227,12 @@
     <Compile Include="Forms\StatusChanges\StatusChangesForm.Designer.cs">
       <DependentUpon>StatusChangesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\UnlockProductions\UnlockProductionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UnlockProductions\UnlockProductionsForm.Designer.cs">
+      <DependentUpon>UnlockProductionsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\MappingHelper.cs" />
     <Compile Include="Helpers\ResourcesHelper.cs" />
     <Compile Include="Program.cs" />
@@ -360,5 +366,6 @@
   <ItemGroup>
     <None Include="Resources\logo_smay.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

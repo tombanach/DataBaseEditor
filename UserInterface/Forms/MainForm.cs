@@ -178,7 +178,6 @@ namespace SmayDbEditor.UserInterface.Forms
             tcTabs.SelectedTab = tpTab;
         }
 
-
         #endregion        
     }
 }
