@@ -25,6 +25,26 @@ namespace SmayDbEditor.DataAccessLayer.Repository
             _connection.Execute(sql, new { porelId = porelId });
         }
 
+        /*
+        _connection.Open();
+        using(var trans = _connection.BeginTransaction())
+        {
+            int records Updated = cnn.Execute(sql, p, trans);
+            Console.WriteLine($"Records Updated: { recordsUpdated }");
+
+            try
+            {
+                _connection.Execute("update dbo.podet_rel set Id = 1", transaction: trans);
+                trans.Commit();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: { ex.Message }");
+                trans.Rollback();
+            }
+        }
+        */
+
         public OrderCorrectionModel GetOrder(int porelId)
         {
             var sql = $"select * from [dbo].[podet_rel] where porel_id = @porelId";
