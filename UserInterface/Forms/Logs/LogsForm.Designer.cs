@@ -30,10 +30,10 @@
         {
             this.tlpLogs = new System.Windows.Forms.TableLayoutPanel();
             this.pLogs = new System.Windows.Forms.Panel();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.splitter1 = new System.Windows.Forms.Splitter();
-            this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.splitter1 = new System.Windows.Forms.Splitter();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.dgvLogs = new System.Windows.Forms.DataGridView();
             this.tlpLogs.SuspendLayout();
             this.pLogs.SuspendLayout();
@@ -68,6 +68,32 @@
             this.pLogs.Size = new System.Drawing.Size(655, 34);
             this.pLogs.TabIndex = 0;
             // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox1.Location = new System.Drawing.Point(500, 3);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(152, 27);
+            this.textBox1.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(358, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(136, 20);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Numer dokumentu:";
+            // 
+            // splitter1
+            // 
+            this.splitter1.Location = new System.Drawing.Point(109, 0);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(206, 34);
+            this.splitter1.TabIndex = 1;
+            this.splitter1.TabStop = false;
+            // 
             // btnRefresh
             // 
             this.btnRefresh.BackColor = System.Drawing.Color.White;
@@ -82,32 +108,6 @@
             this.btnRefresh.Text = "Odśwież";
             this.btnRefresh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRefresh.UseVisualStyleBackColor = false;
-            // 
-            // splitter1
-            // 
-            this.splitter1.Location = new System.Drawing.Point(109, 0);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(206, 34);
-            this.splitter1.TabIndex = 1;
-            this.splitter1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(358, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 20);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Numer dokumentu:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox1.Location = new System.Drawing.Point(500, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(152, 27);
-            this.textBox1.TabIndex = 3;
             // 
             // dgvLogs
             // 
@@ -129,8 +129,8 @@
             this.ClientSize = new System.Drawing.Size(661, 455);
             this.Controls.Add(this.tlpLogs);
             this.Name = "LogsForm";
-            this.ShowIcon = false;
             this.Text = "Logi";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LogsForm_FormClosed);
             this.tlpLogs.ResumeLayout(false);
             this.pLogs.ResumeLayout(false);
             this.pLogs.PerformLayout();

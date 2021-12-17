@@ -26,7 +26,7 @@ namespace SmayDbEditor.UserInterface.Forms
         private TabPage _tpKanbansRemove;
         private TabPage _tpOrdersAddressChange;
         private TabPage _tpPrintersAdding;
-        //private TabPage _tpLogs;
+        private TabPage _tpLogs;
         //private TabPage _tpCancelWzDoc;
 
         #endregion
@@ -104,19 +104,19 @@ namespace SmayDbEditor.UserInterface.Forms
             }
         }
 
-        //private void btnLogs_Click(object sender, EventArgs e)
-        //{
-        //    if (LogsForm.IsNull)
-        //    {
-        //        _tpLogs = new TabPage();
-        //        ShowFormInTabPage(_tpLogs, LogsForm.Instance);
-        //    }
-        //    else
-        //    {
-        //        tcTabs.SelectedTab = _tpLogs;
-        //    }
-        //}
-
+        private void btnLogs_Click(object sender, EventArgs e)
+        {
+            if (LogsForm.IsNull)
+            {
+                _tpLogs = new TabPage();
+                ShowFormInTabPage(_tpLogs, LogsForm.Instance);
+            }
+            else
+            {
+                tcTabs.SelectedTab = _tpLogs;
+            }
+        }
+        
 
         // Red X button to close tabs on MainForm
         private void tcTabs_DrawItem(object sender, DrawItemEventArgs e)
@@ -178,6 +178,8 @@ namespace SmayDbEditor.UserInterface.Forms
             tcTabs.SelectedTab = tpTab;
         }
 
-        #endregion        
+        #endregion
+
+        
     }
 }

@@ -266,6 +266,7 @@ namespace SmayDbEditor.UserInterface.Forms
             this.btnLogs.TabIndex = 2;
             this.btnLogs.Text = "Logi";
             this.btnLogs.UseVisualStyleBackColor = false;
+            this.btnLogs.Click += new System.EventHandler(this.btnLogs_Click);
             // 
             // splitter8
             // 
