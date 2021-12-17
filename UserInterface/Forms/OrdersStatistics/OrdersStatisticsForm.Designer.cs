@@ -1,6 +1,6 @@
-﻿namespace SmayDbEditor.UserInterface.Forms.UnlockProductions
+﻿namespace SmayDbEditor.UserInterface.Forms.OrdersStatistics
 {
-    partial class UnlockProductionsForm
+    partial class OrdersStatisticsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // UnlockProductionsForm
+            // OrdersStatisticsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "UnlockProductionsForm";
-            this.Text = "Odblokowanie prod.";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.UnlockProductionsForm_FormClosed);
+            this.Name = "OrdersStatisticsForm";
+            this.Text = "Statystyki zam.";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.OrdersStatisticsForm_FormClosed);
             this.ResumeLayout(false);
 
         }

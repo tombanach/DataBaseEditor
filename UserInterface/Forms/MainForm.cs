@@ -14,6 +14,8 @@ using SmayDbEditor.UserInterface.Forms.KanbansRemove;
 using SmayDbEditor.UserInterface.Forms.OrdersAddressChange;
 using SmayDbEditor.UserInterface.Forms.PrintersAdding;
 using SmayDbEditor.UserInterface.Forms.Logs;
+using SmayDbEditor.UserInterface.Forms.UnlockProductions;
+using SmayDbEditor.UserInterface.Forms.OrdersStatistics;
 
 namespace SmayDbEditor.UserInterface.Forms
 {
@@ -27,7 +29,8 @@ namespace SmayDbEditor.UserInterface.Forms
         private TabPage _tpOrdersAddressChange;
         private TabPage _tpPrintersAdding;
         private TabPage _tpLogs;
-        //private TabPage _tpCancelWzDoc;
+        private TabPage _tpUnlockProductions;
+        private TabPage _tpOrdersStatistics;
 
         #endregion
         #region Ctor
@@ -104,6 +107,32 @@ namespace SmayDbEditor.UserInterface.Forms
             }
         }
 
+        private void btnUnlockProductions_Click(object sender, EventArgs e)
+        {
+            if (UnlockProductionsForm.IsNull)
+            {
+                _tpUnlockProductions = new TabPage();
+                ShowFormInTabPage(_tpUnlockProductions, UnlockProductionsForm.Instance);
+            }
+            else
+            {
+                tcTabs.SelectedTab = _tpUnlockProductions;
+            }
+        }
+
+        private void btnOrdersStatistics_Click(object sender, EventArgs e)
+        {
+            if (OrdersStatisticsForm.IsNull)
+            {
+                _tpOrdersStatistics = new TabPage();
+                ShowFormInTabPage(_tpOrdersStatistics, OrdersStatisticsForm.Instance);
+            }
+            else
+            {
+                tcTabs.SelectedTab = _tpOrdersStatistics;
+            }
+        }
+
         private void btnLogs_Click(object sender, EventArgs e)
         {
             if (LogsForm.IsNull)
@@ -177,6 +206,8 @@ namespace SmayDbEditor.UserInterface.Forms
             tpTab.Controls.Add(frm);
             tcTabs.SelectedTab = tpTab;
         }
+
+
 
         #endregion
 

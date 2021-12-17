@@ -9,19 +9,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SmayDbEditor.UserInterface.Forms.UnlockProductions
+namespace SmayDbEditor.UserInterface.Forms.OrdersStatistics
 {
-    public partial class UnlockProductionsForm : BaseForm
+    public partial class OrdersStatisticsForm : BaseForm
     {
-        private static UnlockProductionsForm _instance = null;
 
-        public static UnlockProductionsForm Instance
+        private static OrdersStatisticsForm _instance = null;
+
+        public static OrdersStatisticsForm Instance
         {
             get
             {
                 if (_instance == null)
                 {
-                    _instance = new UnlockProductionsForm();
+                    _instance = new OrdersStatisticsForm();
                 }
                 return _instance;
             }
@@ -39,12 +40,12 @@ namespace SmayDbEditor.UserInterface.Forms.UnlockProductions
             }
         }
 
-        public UnlockProductionsForm()
+        public OrdersStatisticsForm()
         {
             InitializeComponent();
         }
 
-        private void UnlockProductionsForm_FormClosed(object sender, FormClosedEventArgs e)
+        private void OrdersStatisticsForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             _instance = null;
         }

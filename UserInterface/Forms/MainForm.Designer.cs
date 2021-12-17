@@ -32,11 +32,9 @@ namespace SmayDbEditor.UserInterface.Forms
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.ssMain = new System.Windows.Forms.StatusStrip();
             this.tsslVersion = new System.Windows.Forms.ToolStripStatusLabel();
-            this.tsslDatabase = new System.Windows.Forms.ToolStripStatusLabel();
-            this.tsslUser = new System.Windows.Forms.ToolStripStatusLabel();
             this.tcMain = new System.Windows.Forms.TabControl();
             this.tpFunctions = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnUnlockProductions = new System.Windows.Forms.Button();
             this.splitter5 = new System.Windows.Forms.Splitter();
             this.btnPrintersAdding = new System.Windows.Forms.Button();
             this.splitter4 = new System.Windows.Forms.Splitter();
@@ -50,9 +48,11 @@ namespace SmayDbEditor.UserInterface.Forms
             this.tpStatistics = new System.Windows.Forms.TabPage();
             this.btnLogs = new System.Windows.Forms.Button();
             this.splitter8 = new System.Windows.Forms.Splitter();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnOrdersStatistics = new System.Windows.Forms.Button();
             this.pMain = new System.Windows.Forms.Panel();
             this.tcTabs = new System.Windows.Forms.TabControl();
+            this.tsslDatabase = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tsslUser = new System.Windows.Forms.ToolStripStatusLabel();
             this.ssMain.SuspendLayout();
             this.tcMain.SuspendLayout();
             this.tpFunctions.SuspendLayout();
@@ -78,20 +78,6 @@ namespace SmayDbEditor.UserInterface.Forms
             this.tsslVersion.Size = new System.Drawing.Size(81, 17);
             this.tsslVersion.Text = "Wersja: 1.0.0.0";
             // 
-            // tsslDatabase
-            // 
-            this.tsslDatabase.Image = ((System.Drawing.Image)(resources.GetObject("tsslDatabase.Image")));
-            this.tsslDatabase.Name = "tsslDatabase";
-            this.tsslDatabase.Size = new System.Drawing.Size(163, 17);
-            this.tsslDatabase.Text = "Baza: Wms_SmayDB_Conn";
-            // 
-            // tsslUser
-            // 
-            this.tsslUser.Image = global::SmayDbEditor.UserInterface.Properties.Resources.User_16;
-            this.tsslUser.Name = "tsslUser";
-            this.tsslUser.Size = new System.Drawing.Size(158, 17);
-            this.tsslUser.Text = "Użytkownik: dbEditorUser";
-            // 
             // tcMain
             // 
             this.tcMain.Controls.Add(this.tpFunctions);
@@ -106,7 +92,7 @@ namespace SmayDbEditor.UserInterface.Forms
             // 
             // tpFunctions
             // 
-            this.tpFunctions.Controls.Add(this.button2);
+            this.tpFunctions.Controls.Add(this.btnUnlockProductions);
             this.tpFunctions.Controls.Add(this.splitter5);
             this.tpFunctions.Controls.Add(this.btnPrintersAdding);
             this.tpFunctions.Controls.Add(this.splitter4);
@@ -125,16 +111,17 @@ namespace SmayDbEditor.UserInterface.Forms
             this.tpFunctions.Text = "Funkcje";
             this.tpFunctions.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnUnlockProductions
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.Location = new System.Drawing.Point(3, 281);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(125, 63);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Odblokowanie produkcji";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnUnlockProductions.BackColor = System.Drawing.Color.White;
+            this.btnUnlockProductions.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUnlockProductions.Location = new System.Drawing.Point(3, 281);
+            this.btnUnlockProductions.Name = "btnUnlockProductions";
+            this.btnUnlockProductions.Size = new System.Drawing.Size(125, 63);
+            this.btnUnlockProductions.TabIndex = 10;
+            this.btnUnlockProductions.Text = "Odblokowanie produkcji";
+            this.btnUnlockProductions.UseVisualStyleBackColor = false;
+            this.btnUnlockProductions.Click += new System.EventHandler(this.btnUnlockProductions_Click);
             // 
             // splitter5
             // 
@@ -247,7 +234,7 @@ namespace SmayDbEditor.UserInterface.Forms
             // 
             this.tpStatistics.Controls.Add(this.btnLogs);
             this.tpStatistics.Controls.Add(this.splitter8);
-            this.tpStatistics.Controls.Add(this.button1);
+            this.tpStatistics.Controls.Add(this.btnOrdersStatistics);
             this.tpStatistics.Location = new System.Drawing.Point(4, 24);
             this.tpStatistics.Name = "tpStatistics";
             this.tpStatistics.Padding = new System.Windows.Forms.Padding(3);
@@ -277,17 +264,18 @@ namespace SmayDbEditor.UserInterface.Forms
             this.splitter8.TabIndex = 1;
             this.splitter8.TabStop = false;
             // 
-            // button1
+            // btnOrdersStatistics
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 40);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Statystyki zamówień";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnOrdersStatistics.BackColor = System.Drawing.Color.White;
+            this.btnOrdersStatistics.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOrdersStatistics.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnOrdersStatistics.Location = new System.Drawing.Point(3, 3);
+            this.btnOrdersStatistics.Name = "btnOrdersStatistics";
+            this.btnOrdersStatistics.Size = new System.Drawing.Size(125, 40);
+            this.btnOrdersStatistics.TabIndex = 0;
+            this.btnOrdersStatistics.Text = "Statystyki zamówień";
+            this.btnOrdersStatistics.UseVisualStyleBackColor = false;
+            this.btnOrdersStatistics.Click += new System.EventHandler(this.btnOrdersStatistics_Click);
             // 
             // pMain
             // 
@@ -312,6 +300,20 @@ namespace SmayDbEditor.UserInterface.Forms
             this.tcTabs.TabIndex = 0;
             this.tcTabs.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tcTabs_DrawItem);
             this.tcTabs.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tcTabs_MouseDown);
+            // 
+            // tsslDatabase
+            // 
+            this.tsslDatabase.Image = ((System.Drawing.Image)(resources.GetObject("tsslDatabase.Image")));
+            this.tsslDatabase.Name = "tsslDatabase";
+            this.tsslDatabase.Size = new System.Drawing.Size(163, 16);
+            this.tsslDatabase.Text = "Baza: Wms_SmayDB_Conn";
+            // 
+            // tsslUser
+            // 
+            this.tsslUser.Image = global::SmayDbEditor.UserInterface.Properties.Resources.User_16;
+            this.tsslUser.Name = "tsslUser";
+            this.tsslUser.Size = new System.Drawing.Size(158, 16);
+            this.tsslUser.Text = "Użytkownik: dbEditorUser";
             // 
             // MainForm
             // 
@@ -357,10 +359,10 @@ namespace SmayDbEditor.UserInterface.Forms
         private System.Windows.Forms.ToolStripStatusLabel tsslUser;
         private System.Windows.Forms.Button btnLogs;
         private System.Windows.Forms.Splitter splitter8;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnOrdersStatistics;
         private System.Windows.Forms.TabControl tcTabs;
         private System.Windows.Forms.Button btnPrintersAdding;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnUnlockProductions;
         private System.Windows.Forms.Splitter splitter5;
     }
 }
