@@ -72,7 +72,9 @@
     <Compile Include="Interfaces\ILogRepository.cs" />
     <Compile Include="Interfaces\IOrderAddressChangeRepository.cs" />
     <Compile Include="Interfaces\IOrderCorrectionRepository.cs" />
+    <Compile Include="Interfaces\IOrderStatisticRepository.cs" />
     <Compile Include="Interfaces\IStatusChangeRepository.cs" />
+    <Compile Include="Interfaces\IUnlockProductionRepository.cs" />
     <Compile Include="Models\EntityModel.cs" />
     <Compile Include="Models\KanbanRemoveModel.cs" />
     <Compile Include="Models\LogModel.cs" />
@@ -84,9 +86,11 @@
     <Compile Include="Models\UnlockProductionModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\KanbanRemoveRepository.cs" />
+    <Compile Include="Repository\LogRepository.cs" />
     <Compile Include="Repository\OrderAddressChangeRepository.cs" />
     <Compile Include="Repository\OrderCorrectionRepository.cs" />
     <Compile Include="Repository\StatusChangeRepository.cs" />
+    <Compile Include="Repository\UnlockProductionRepository.cs" />
     <Compile Include="ViewModel\KanbanRemoveViewModel.cs" />
     <Compile Include="ViewModel\LogViewModel.cs" />
     <Compile Include="ViewModel\OrderAddressChangeViewModel.cs" />
