@@ -78,8 +78,10 @@
     <Compile Include="Models\LogModel.cs" />
     <Compile Include="Models\OrderAddressChangeModel.cs" />
     <Compile Include="Models\OrderCorrectionModel.cs" />
+    <Compile Include="Models\OrderStatisticModel.cs" />
     <Compile Include="Models\PrinterAddingModel.cs" />
     <Compile Include="Models\StatusChangeModel.cs" />
+    <Compile Include="Models\UnlockProductionModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\KanbanRemoveRepository.cs" />
     <Compile Include="Repository\OrderAddressChangeRepository.cs" />
@@ -89,8 +91,10 @@
     <Compile Include="ViewModel\LogViewModel.cs" />
     <Compile Include="ViewModel\OrderAddressChangeViewModel.cs" />
     <Compile Include="ViewModel\OrderCorrectionViewModel.cs" />
+    <Compile Include="ViewModel\OrderStatisticViewModel.cs" />
     <Compile Include="ViewModel\PrinterAddingViewModel.cs" />
     <Compile Include="ViewModel\StatusChangeViewModel.cs" />
+    <Compile Include="ViewModel\UnlockProductionViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
