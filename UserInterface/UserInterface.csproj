@@ -307,10 +307,13 @@
     <None Include="Properties\DataSources\SmayDbEditor.DataAccessLayer.Models.EntityModel.datasource" />
     <None Include="Properties\DataSources\SmayDbEditor.DataAccessLayer.Models.OrderCorrectionModel.datasource" />
     <None Include="Properties\DataSources\SmayDbEditor.DataAccessLayer.ViewModel.KanbanRemoveViewModel.datasource" />
+    <None Include="Properties\DataSources\SmayDbEditor.DataAccessLayer.ViewModel.LogViewModel.datasource" />
     <None Include="Properties\DataSources\SmayDbEditor.DataAccessLayer.ViewModel.OrderAddressChangeViewModel.datasource" />
     <None Include="Properties\DataSources\SmayDbEditor.DataAccessLayer.ViewModel.OrderCorrectionViewModel1.datasource" />
+    <None Include="Properties\DataSources\SmayDbEditor.DataAccessLayer.ViewModel.OrderStatisticViewModel.datasource" />
     <None Include="Properties\DataSources\SmayDbEditor.DataAccessLayer.ViewModel.PrinterAddingViewModel.datasource" />
     <None Include="Properties\DataSources\SmayDbEditor.DataAccessLayer.ViewModel.StatusChangeViewModel.datasource" />
+    <None Include="Properties\DataSources\SmayDbEditor.DataAccessLayer.ViewModel.UnlockProductionViewModel.datasource" />
     <None Include="Properties\DataSources\SmayDbEditor.DataAccessLayer.ViewModels.OrderCorrectionViewModel.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

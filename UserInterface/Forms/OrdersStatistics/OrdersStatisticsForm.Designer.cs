@@ -28,13 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tlpOrdersStatistics = new System.Windows.Forms.TableLayoutPanel();
             this.pOrdersStatistics = new System.Windows.Forms.Panel();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.dgvOrdersStatistics = new System.Windows.Forms.DataGridView();
+            this.orderStatisticViewModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tlpOrdersStatistics.SuspendLayout();
             this.pOrdersStatistics.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdersStatistics)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderStatisticViewModelBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tlpOrdersStatistics
@@ -90,6 +93,10 @@
             this.dgvOrdersStatistics.Size = new System.Drawing.Size(794, 404);
             this.dgvOrdersStatistics.TabIndex = 1;
             // 
+            // orderStatisticViewModelBindingSource
+            // 
+            this.orderStatisticViewModelBindingSource.DataSource = typeof(SmayDbEditor.DataAccessLayer.ViewModel.OrderStatisticViewModel);
+            // 
             // OrdersStatisticsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -102,6 +109,7 @@
             this.tlpOrdersStatistics.ResumeLayout(false);
             this.pOrdersStatistics.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdersStatistics)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderStatisticViewModelBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -112,5 +120,6 @@
         private System.Windows.Forms.Panel pOrdersStatistics;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.DataGridView dgvOrdersStatistics;
+        private System.Windows.Forms.BindingSource orderStatisticViewModelBindingSource;
     }
 }

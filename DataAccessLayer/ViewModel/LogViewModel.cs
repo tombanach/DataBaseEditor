@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SmayDbEditor.DataAccessLayer.ViewModel
 {
-    internal class LogViewModel
+    public class LogViewModel
     {
         public int log_id { get; set; }
         public string log_num { get; set; }
