@@ -135,6 +135,7 @@
             this.dgvLogs.Location = new System.Drawing.Point(3, 43);
             this.dgvLogs.Name = "dgvLogs";
             this.dgvLogs.ReadOnly = true;
+            this.dgvLogs.RowHeadersVisible = false;
             this.dgvLogs.Size = new System.Drawing.Size(655, 409);
             this.dgvLogs.TabIndex = 1;
             // 
@@ -148,6 +149,7 @@
             this.logidDataGridViewTextBoxColumn.HeaderText = "log_id";
             this.logidDataGridViewTextBoxColumn.Name = "logidDataGridViewTextBoxColumn";
             this.logidDataGridViewTextBoxColumn.ReadOnly = true;
+            this.logidDataGridViewTextBoxColumn.Visible = false;
             // 
             // lognumDataGridViewTextBoxColumn
             // 
@@ -172,6 +174,7 @@
             // 
             // logerrorDataGridViewTextBoxColumn
             // 
+            this.logerrorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.logerrorDataGridViewTextBoxColumn.DataPropertyName = "log_error";
             this.logerrorDataGridViewTextBoxColumn.HeaderText = "log_error";
             this.logerrorDataGridViewTextBoxColumn.Name = "logerrorDataGridViewTextBoxColumn";
@@ -204,11 +207,11 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvLogs;
+        private System.Windows.Forms.BindingSource bsLogs;
         private System.Windows.Forms.DataGridViewTextBoxColumn logidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lognumDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn logdescrDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn logtstampDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn logerrorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource bsLogs;
     }
 }

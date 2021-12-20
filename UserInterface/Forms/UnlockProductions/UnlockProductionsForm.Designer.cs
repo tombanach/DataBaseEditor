@@ -128,6 +128,7 @@
             this.dgvUnlockProductions.Location = new System.Drawing.Point(3, 43);
             this.dgvUnlockProductions.Name = "dgvUnlockProductions";
             this.dgvUnlockProductions.ReadOnly = true;
+            this.dgvUnlockProductions.RowHeadersVisible = false;
             this.dgvUnlockProductions.Size = new System.Drawing.Size(794, 404);
             this.dgvUnlockProductions.TabIndex = 1;
             // 
@@ -158,6 +159,7 @@
             // 
             // timestartedDataGridViewTextBoxColumn
             // 
+            this.timestartedDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.timestartedDataGridViewTextBoxColumn.DataPropertyName = "timestarted";
             this.timestartedDataGridViewTextBoxColumn.HeaderText = "timestarted";
             this.timestartedDataGridViewTextBoxColumn.Name = "timestartedDataGridViewTextBoxColumn";
@@ -188,10 +190,10 @@
         private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.DataGridView dgvUnlockProductions;
+        private System.Windows.Forms.BindingSource bsUnlockProductions;
         private System.Windows.Forms.DataGridViewTextBoxColumn proccodeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn procnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn timestartedDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource bsUnlockProductions;
     }
 }
