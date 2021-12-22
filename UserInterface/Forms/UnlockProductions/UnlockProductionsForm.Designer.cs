@@ -33,13 +33,13 @@
             this.pUnlockProductions = new System.Windows.Forms.Panel();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.splitter1 = new System.Windows.Forms.Splitter();
-            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnRemove = new System.Windows.Forms.Button();
             this.dgvUnlockProductions = new System.Windows.Forms.DataGridView();
-            this.bsUnlockProductions = new System.Windows.Forms.BindingSource(this.components);
             this.proccodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.procnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timestartedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bsUnlockProductions = new System.Windows.Forms.BindingSource(this.components);
             this.tlpUnlockProductions.SuspendLayout();
             this.pUnlockProductions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUnlockProductions)).BeginInit();
@@ -66,7 +66,7 @@
             // 
             this.pUnlockProductions.Controls.Add(this.btnRefresh);
             this.pUnlockProductions.Controls.Add(this.splitter1);
-            this.pUnlockProductions.Controls.Add(this.btnDelete);
+            this.pUnlockProductions.Controls.Add(this.btnRemove);
             this.pUnlockProductions.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pUnlockProductions.Location = new System.Drawing.Point(3, 3);
             this.pUnlockProductions.Name = "pUnlockProductions";
@@ -96,20 +96,20 @@
             this.splitter1.TabIndex = 1;
             this.splitter1.TabStop = false;
             // 
-            // btnDelete
+            // btnRemove
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.White;
-            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnDelete.Image = global::SmayDbEditor.UserInterface.Properties.Resources.delete_24;
-            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(0, 0);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(100, 34);
-            this.btnDelete.TabIndex = 0;
-            this.btnDelete.Text = "Usuń";
-            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnRemove.BackColor = System.Drawing.Color.White;
+            this.btnRemove.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnRemove.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnRemove.Image = global::SmayDbEditor.UserInterface.Properties.Resources.delete_24;
+            this.btnRemove.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRemove.Location = new System.Drawing.Point(0, 0);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(100, 34);
+            this.btnRemove.TabIndex = 0;
+            this.btnRemove.Text = "Usuń";
+            this.btnRemove.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRemove.UseVisualStyleBackColor = false;
             // 
             // dgvUnlockProductions
             // 
@@ -129,12 +129,9 @@
             this.dgvUnlockProductions.Name = "dgvUnlockProductions";
             this.dgvUnlockProductions.ReadOnly = true;
             this.dgvUnlockProductions.RowHeadersVisible = false;
+            this.dgvUnlockProductions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUnlockProductions.Size = new System.Drawing.Size(794, 404);
             this.dgvUnlockProductions.TabIndex = 1;
-            // 
-            // bsUnlockProductions
-            // 
-            this.bsUnlockProductions.DataSource = typeof(SmayDbEditor.DataAccessLayer.ViewModel.UnlockProductionViewModel);
             // 
             // proccodeDataGridViewTextBoxColumn
             // 
@@ -165,6 +162,10 @@
             this.timestartedDataGridViewTextBoxColumn.Name = "timestartedDataGridViewTextBoxColumn";
             this.timestartedDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // bsUnlockProductions
+            // 
+            this.bsUnlockProductions.DataSource = typeof(SmayDbEditor.DataAccessLayer.ViewModel.UnlockProductionViewModel);
+            // 
             // UnlockProductionsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -188,7 +189,7 @@
         private System.Windows.Forms.Panel pUnlockProductions;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Splitter splitter1;
-        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.DataGridView dgvUnlockProductions;
         private System.Windows.Forms.BindingSource bsUnlockProductions;
         private System.Windows.Forms.DataGridViewTextBoxColumn proccodeDataGridViewTextBoxColumn;

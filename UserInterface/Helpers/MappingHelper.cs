@@ -199,5 +199,27 @@ namespace SmayDbEditor.UserInterface.Helpers
         }
 
         #endregion
+        #region UnlockProduction
+
+        public static IList<UnlockProductionViewModel> MapUnlockProductionModelToUnlockProductionViewModel
+            (IList<UnlockProductionModel> unlockProductionsModel)
+        {
+            IList<UnlockProductionViewModel> unlockProductionsViewModel = new List<UnlockProductionViewModel>();
+
+            foreach (UnlockProductionModel unlockProductionModel in unlockProductionsModel)
+            {
+                UnlockProductionViewModel unlockProductionViewModel = new UnlockProductionViewModel();
+                unlockProductionViewModel.proccode = unlockProductionModel.ProcCode;
+                unlockProductionViewModel.procname = unlockProductionModel.ProcName;
+                unlockProductionViewModel.username = unlockProductionModel.UserName;
+                unlockProductionViewModel.timestarted = unlockProductionModel.TimeStarted;
+
+                unlockProductionsViewModel.Add(unlockProductionViewModel);
+            }
+
+            return unlockProductionsViewModel;
+        }
+
+        #endregion
     }
 }

@@ -1,4 +1,7 @@
-﻿using SmayDbEditor.UserInterface.Forms.Base;
+﻿using SmayDbEditor.DataAccessLayer.Models;
+using SmayDbEditor.DataAccessLayer.ViewModel;
+using SmayDbEditor.UserInterface.Forms.Base;
+using SmayDbEditor.UserInterface.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +17,7 @@ namespace SmayDbEditor.UserInterface.Forms.UnlockProductions
     public partial class UnlockProductionsForm : BaseForm
     {
         private static UnlockProductionsForm _instance = null;
+        private static IList<UnlockProductionViewModel> fakeUnlockProductions;
 
         public static UnlockProductionsForm Instance
         {
@@ -42,6 +46,30 @@ namespace SmayDbEditor.UserInterface.Forms.UnlockProductions
         public UnlockProductionsForm()
         {
             InitializeComponent();
+            fakeUnlockProductions = GetFakeUnlockProductions();
+            PrepareUnlockProductionsData();
+        }
+
+        private void PrepareUnlockProductionsData()
+        {
+            bsUnlockProductions.DataSource = new BindingList<UnlockProductionViewModel>(fakeUnlockProductions);
+            dgvUnlockProductions.DataSource = bsUnlockProductions;
+        }
+
+        private IList<UnlockProductionViewModel> GetFakeUnlockProductions()
+        {
+            IList<UnlockProductionModel> fakeUnlockProductionsModel = new List<UnlockProductionModel>()
+            {
+                new UnlockProductionModel()
+                {
+                    ProcCode = 1,
+                    ProcName = "",
+                    UserName = "",
+                    TimeStarted = DateTime.Now,
+                }
+            };        
+            
+            return MappingHelper.MapUnlockProductionModelToUnlockProductionViewModel(fakeUnlockProductionsModel);
         }
 
         private void UnlockProductionsForm_FormClosed(object sender, FormClosedEventArgs e)

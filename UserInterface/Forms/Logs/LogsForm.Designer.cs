@@ -36,12 +36,12 @@
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.dgvLogs = new System.Windows.Forms.DataGridView();
-            this.bsLogs = new System.Windows.Forms.BindingSource(this.components);
             this.logidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lognumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.logdescrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.logtstampDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.logerrorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bsLogs = new System.Windows.Forms.BindingSource(this.components);
             this.tlpLogs.SuspendLayout();
             this.pLogs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLogs)).BeginInit();
@@ -106,7 +106,7 @@
             // 
             this.btnRefresh.BackColor = System.Drawing.Color.White;
             this.btnRefresh.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnRefresh.Image = global::SmayDbEditor.UserInterface.Properties.Resources.refresh_24;
             this.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRefresh.Location = new System.Drawing.Point(0, 0);
@@ -138,10 +138,6 @@
             this.dgvLogs.RowHeadersVisible = false;
             this.dgvLogs.Size = new System.Drawing.Size(655, 409);
             this.dgvLogs.TabIndex = 1;
-            // 
-            // bsLogs
-            // 
-            this.bsLogs.DataSource = typeof(SmayDbEditor.DataAccessLayer.ViewModel.LogViewModel);
             // 
             // logidDataGridViewTextBoxColumn
             // 
@@ -179,6 +175,10 @@
             this.logerrorDataGridViewTextBoxColumn.HeaderText = "log_error";
             this.logerrorDataGridViewTextBoxColumn.Name = "logerrorDataGridViewTextBoxColumn";
             this.logerrorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bsLogs
+            // 
+            this.bsLogs.DataSource = typeof(SmayDbEditor.DataAccessLayer.ViewModel.LogViewModel);
             // 
             // LogsForm
             // 

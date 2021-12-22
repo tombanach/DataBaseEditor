@@ -105,8 +105,6 @@ namespace SmayDbEditor.UserInterface.Forms.KanbansRemove
             RefreshGrid();
         }
 
-        #endregion
-
         private void KanbansRemoveSearchBar_TextChanged(object sender, EventArgs e)
         {
             var mainconn = ConfigurationManager.ConnectionStrings["Local"].ConnectionString;
@@ -121,5 +119,7 @@ namespace SmayDbEditor.UserInterface.Forms.KanbansRemove
             bsKanbansRemove.DataSource = dt;
             sqlconn.Close();
         }
+
+        #endregion        
     }
 }
