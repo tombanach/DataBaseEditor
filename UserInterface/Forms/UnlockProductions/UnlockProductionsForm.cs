@@ -16,8 +16,13 @@ namespace SmayDbEditor.UserInterface.Forms.UnlockProductions
 {
     public partial class UnlockProductionsForm : BaseForm
     {
+        #region Fields
+
         private static UnlockProductionsForm _instance = null;
         private static IList<UnlockProductionViewModel> fakeUnlockProductions;
+
+        #endregion
+        #region Properties
 
         public static UnlockProductionsForm Instance
         {
@@ -43,12 +48,18 @@ namespace SmayDbEditor.UserInterface.Forms.UnlockProductions
             }
         }
 
+        #endregion
+        #region Constructor
+
         public UnlockProductionsForm()
         {
             InitializeComponent();
             fakeUnlockProductions = GetFakeUnlockProductions();
             PrepareUnlockProductionsData();
         }
+
+        #endregion
+        #region Private Methods
 
         private void PrepareUnlockProductionsData()
         {
@@ -67,14 +78,19 @@ namespace SmayDbEditor.UserInterface.Forms.UnlockProductions
                     UserName = "",
                     TimeStarted = DateTime.Now,
                 }
-            };        
-            
+            };
+
             return MappingHelper.MapUnlockProductionModelToUnlockProductionViewModel(fakeUnlockProductionsModel);
         }
+
+        #endregion
+        #region Events
 
         private void UnlockProductionsForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             _instance = null;
         }
+
+        #endregion
     }
 }
