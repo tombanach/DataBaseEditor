@@ -47,7 +47,7 @@ namespace SmayDbEditor.UserInterface.Helpers
             orderCorrectionViewModel.porel_tstamp = orderCorrectionModel.Porel_Tstamp;
 
             return orderCorrectionViewModel;
-        }
+        }        
 
         #endregion
         #region StatusChanges
@@ -202,7 +202,7 @@ namespace SmayDbEditor.UserInterface.Helpers
         #region UnlockProduction
 
         public static IList<UnlockProductionViewModel> MapUnlockProductionModelToUnlockProductionViewModel
-            (IList<UnlockProductionModel> unlockProductionsModel)
+            (IEnumerable<UnlockProductionModel> unlockProductionsModel)
         {
             IList<UnlockProductionViewModel> unlockProductionsViewModel = new List<UnlockProductionViewModel>();
 
@@ -219,7 +219,7 @@ namespace SmayDbEditor.UserInterface.Helpers
 
             return unlockProductionsViewModel;
         }
-
+        
         #endregion
     }
 }

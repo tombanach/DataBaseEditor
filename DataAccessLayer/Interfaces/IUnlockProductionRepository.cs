@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SmayDbEditor.DataAccessLayer.Interfaces
 {
-    internal interface IUnlockProductionRepository
+    public interface IUnlockProductionRepository
     {
         IEnumerable<UnlockProductionModel> GetDocuments();
         UnlockProductionModel GetDocument(int procCode);

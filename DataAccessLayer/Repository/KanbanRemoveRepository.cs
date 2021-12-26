@@ -28,7 +28,7 @@ namespace SmayDbEditor.DataAccessLayer.Repository
 
         public IEnumerable<KanbanRemoveModel> GetKanbans()
         {
-            var sql = $"select * from [dbo].[kbtr_rel]";
+            var sql = $"select * from [WmsSmayDb_Conn].[dbo].[kbtr_rel]";
 
             return _connection.Query<KanbanRemoveModel>(sql);
         }

@@ -1,10 +1,12 @@
 ﻿using SmayDbEditor.DataAccessLayer.Models;
+using SmayDbEditor.DataAccessLayer.Repository;
 using SmayDbEditor.DataAccessLayer.ViewModel;
 using SmayDbEditor.UserInterface.Forms.Base;
 using SmayDbEditor.UserInterface.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -54,12 +56,18 @@ namespace SmayDbEditor.UserInterface.Forms.UnlockProductions
         public UnlockProductionsForm()
         {
             InitializeComponent();
-            fakeUnlockProductions = GetFakeUnlockProductions();
-            PrepareUnlockProductionsData();
+            RefreshGrid();
+            
         }
 
         #endregion
         #region Private Methods
+
+        private void RefreshGrid()
+        {
+            fakeUnlockProductions = GetFakeUnlockProductions();
+            PrepareUnlockProductionsData();
+        }
 
         private void PrepareUnlockProductionsData()
         {
@@ -69,26 +77,30 @@ namespace SmayDbEditor.UserInterface.Forms.UnlockProductions
 
         private IList<UnlockProductionViewModel> GetFakeUnlockProductions()
         {
-            IList<UnlockProductionModel> fakeUnlockProductionsModel = new List<UnlockProductionModel>()
-            {
-                new UnlockProductionModel()
-                {
-                    ProcCode = 1,
-                    ProcName = "",
-                    UserName = "",
-                    TimeStarted = DateTime.Now,
-                }
-            };
-
-            return MappingHelper.MapUnlockProductionModelToUnlockProductionViewModel(fakeUnlockProductionsModel);
-        }
+            var documents = UnlockProductionRepository.GetDocuments();
+            return MappingHelper.MapUnlockProductionModelToUnlockProductionViewModel(documents);
+        }        
 
         #endregion
         #region Events
 
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            int unlockProductionId = Convert.ToInt32(dgvUnlockProductions.CurrentRow.Cells["col_proccode"].Value);
+            int selectedRowIndex = dgvUnlockProductions.CurrentRow.Index;
+
+            UnlockProductionRepository.DeleteDocument(unlockProductionId);
+            RefreshGrid();
+        }
+
         private void UnlockProductionsForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             _instance = null;
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            RefreshGrid();
         }
 
         #endregion

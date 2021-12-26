@@ -15,10 +15,15 @@ namespace SmayDbEditor.UserInterface.Forms.Base
 {
     public partial class BaseForm : Form
     {
+        #region Constructor
+
         public BaseForm()
         {
             InitializeComponent();
         }
+
+        #endregion
+        #region OrderCorrectionRepository
 
         private IOrderCorrectionRepository _orderCorrectionRepository;
 
@@ -34,6 +39,8 @@ namespace SmayDbEditor.UserInterface.Forms.Base
             }
         }
 
+        #endregion
+        #region StatusChangeRepository
 
         private IStatusChangeRepository _statusChangeRepository;
 
@@ -49,6 +56,8 @@ namespace SmayDbEditor.UserInterface.Forms.Base
             }
         }
 
+        #endregion
+        #region KanbanRemoveRepository
 
         private IKanbanRemoveRepository _kanbanRemoveRepository;
 
@@ -64,6 +73,8 @@ namespace SmayDbEditor.UserInterface.Forms.Base
             }
         }
 
+        #endregion
+        #region OrderAddressChangeRepository
 
         private IOrderAddressChangeRepository _orderAddressChangeRepository;
 
@@ -78,5 +89,29 @@ namespace SmayDbEditor.UserInterface.Forms.Base
                 return _orderAddressChangeRepository;
             }
         }
+
+        #endregion
+        #region UnlockProductionRepository
+
+        private IUnlockProductionRepository _unlockProductionRepository;
+
+        protected IUnlockProductionRepository UnlockProductionRepository
+        {
+            get
+            {
+                if (_unlockProductionRepository == null)
+                {
+                    _unlockProductionRepository = (IUnlockProductionRepository)Program.ServiceProvider.GetService(typeof(IUnlockProductionRepository));
+                }
+                return _unlockProductionRepository;
+            }
+        }
+
+        #endregion
+        #region LogRepository
+
+
+
+        #endregion
     }
 }
