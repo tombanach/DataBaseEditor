@@ -56,8 +56,7 @@ namespace SmayDbEditor.UserInterface.Forms.UnlockProductions
         public UnlockProductionsForm()
         {
             InitializeComponent();
-            RefreshGrid();
-            
+            RefreshGrid();            
         }
 
         #endregion
@@ -88,6 +87,8 @@ namespace SmayDbEditor.UserInterface.Forms.UnlockProductions
         {
             int unlockProductionId = Convert.ToInt32(dgvUnlockProductions.CurrentRow.Cells["col_proccode"].Value);
             int selectedRowIndex = dgvUnlockProductions.CurrentRow.Index;
+
+            // UnlockProductionRemove(unlockProductionId);
 
             UnlockProductionRepository.DeleteDocument(unlockProductionId);
             RefreshGrid();

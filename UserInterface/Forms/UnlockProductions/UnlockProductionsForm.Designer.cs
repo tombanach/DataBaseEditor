@@ -35,11 +35,11 @@
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.btnRemove = new System.Windows.Forms.Button();
             this.dgvUnlockProductions = new System.Windows.Forms.DataGridView();
-            this.proccodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.procnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timestartedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bsUnlockProductions = new System.Windows.Forms.BindingSource(this.components);
+            this.col_timestarted = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_procname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_proccode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tlpUnlockProductions.SuspendLayout();
             this.pUnlockProductions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUnlockProductions)).BeginInit();
@@ -121,10 +121,10 @@
             this.dgvUnlockProductions.BackgroundColor = System.Drawing.Color.White;
             this.dgvUnlockProductions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUnlockProductions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.proccodeDataGridViewTextBoxColumn,
-            this.procnameDataGridViewTextBoxColumn,
-            this.usernameDataGridViewTextBoxColumn,
-            this.timestartedDataGridViewTextBoxColumn});
+            this.col_proccode,
+            this.col_procname,
+            this.col_username,
+            this.col_timestarted});
             this.dgvUnlockProductions.DataSource = this.bsUnlockProductions;
             this.dgvUnlockProductions.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvUnlockProductions.Location = new System.Drawing.Point(3, 43);
@@ -135,38 +135,41 @@
             this.dgvUnlockProductions.Size = new System.Drawing.Size(794, 404);
             this.dgvUnlockProductions.TabIndex = 1;
             // 
-            // proccodeDataGridViewTextBoxColumn
-            // 
-            this.proccodeDataGridViewTextBoxColumn.DataPropertyName = "proccode";
-            this.proccodeDataGridViewTextBoxColumn.HeaderText = "proccode";
-            this.proccodeDataGridViewTextBoxColumn.Name = "proccodeDataGridViewTextBoxColumn";
-            this.proccodeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // procnameDataGridViewTextBoxColumn
-            // 
-            this.procnameDataGridViewTextBoxColumn.DataPropertyName = "procname";
-            this.procnameDataGridViewTextBoxColumn.HeaderText = "procname";
-            this.procnameDataGridViewTextBoxColumn.Name = "procnameDataGridViewTextBoxColumn";
-            this.procnameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // usernameDataGridViewTextBoxColumn
-            // 
-            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "username";
-            this.usernameDataGridViewTextBoxColumn.HeaderText = "username";
-            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
-            this.usernameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // timestartedDataGridViewTextBoxColumn
-            // 
-            this.timestartedDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.timestartedDataGridViewTextBoxColumn.DataPropertyName = "timestarted";
-            this.timestartedDataGridViewTextBoxColumn.HeaderText = "timestarted";
-            this.timestartedDataGridViewTextBoxColumn.Name = "timestartedDataGridViewTextBoxColumn";
-            this.timestartedDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // bsUnlockProductions
             // 
             this.bsUnlockProductions.DataSource = typeof(SmayDbEditor.DataAccessLayer.ViewModel.UnlockProductionViewModel);
+            // 
+            // col_timestarted
+            // 
+            this.col_timestarted.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col_timestarted.DataPropertyName = "timestarted";
+            this.col_timestarted.HeaderText = "timestarted";
+            this.col_timestarted.Name = "col_timestarted";
+            this.col_timestarted.ReadOnly = true;
+            // 
+            // col_username
+            // 
+            this.col_username.DataPropertyName = "username";
+            this.col_username.HeaderText = "username";
+            this.col_username.Name = "col_username";
+            this.col_username.ReadOnly = true;
+            this.col_username.Width = 120;
+            // 
+            // col_procname
+            // 
+            this.col_procname.DataPropertyName = "procname";
+            this.col_procname.HeaderText = "procname";
+            this.col_procname.Name = "col_procname";
+            this.col_procname.ReadOnly = true;
+            this.col_procname.Width = 120;
+            // 
+            // col_proccode
+            // 
+            this.col_proccode.DataPropertyName = "proccode";
+            this.col_proccode.HeaderText = "proccode";
+            this.col_proccode.Name = "col_proccode";
+            this.col_proccode.ReadOnly = true;
+            this.col_proccode.Width = 120;
             // 
             // UnlockProductionsForm
             // 
@@ -194,9 +197,9 @@
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.DataGridView dgvUnlockProductions;
         private System.Windows.Forms.BindingSource bsUnlockProductions;
-        private System.Windows.Forms.DataGridViewTextBoxColumn proccodeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn procnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn timestartedDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_proccode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_procname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_username;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_timestarted;
     }
 }
