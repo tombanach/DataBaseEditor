@@ -28,8 +28,7 @@ namespace SmayDbEditor.DataAccessLayer.Repository
 
         public IEnumerable<UnlockProductionModel> GetDocuments()
         {
-            var sql = $"select * from [WmsSmayDb_Conn].[dbo].[kbtr_rel]";
-                //$"select * from [SmayDB].[dbo].[P000_Locks01]";
+            var sql = $"select * from [SmayDB].[dbo].[P000_Locks01]";            
 
             return _connection.Query<UnlockProductionModel>(sql);
         }
