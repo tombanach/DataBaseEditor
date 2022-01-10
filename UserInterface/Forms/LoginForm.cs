@@ -27,8 +27,8 @@ namespace SmayDbEditor.UserInterface.Forms
         {
             if (isValid())
             {
-                using (SqlConnection conn = new SqlConnection(@"Data Source=localhost\SQLEXPRESS;Database=WmsSmayDb_Conn;User Id=dbEditorUser;Password=Dupa54321;"))
-                //using (SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Database=Wms_SmayDb_Conn;User Id=dbEditorUser;Password=Dupa54321;"))
+                using (SqlConnection conn = new SqlConnection(@"Data Source=localhost;Database=WmsSmayDb_Conn;User Id=dbEditorUser;Password=Dupa54321;"))
+                //using (SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Database=Wms_SmayDb_Conn;User Id=dbEditorUser;Password=Dupa54321;")) 
                 {
                     string query = "SELECT * FROM Login WHERE Username = '" + txtUserName.Text.Trim() + "' AND Password = '" + txtPassword.Text.Trim() + "'";
                     SqlDataAdapter sda = new SqlDataAdapter(query, conn);
