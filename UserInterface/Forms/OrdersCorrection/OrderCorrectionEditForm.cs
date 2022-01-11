@@ -163,12 +163,12 @@ namespace SmayDbEditor.UserInterface.Forms.OrdersCorrection
                 var orderCorrection = new OrderCorrectionModel
                 {
                     porel_id = _orderCorrection.porel_id,
-                    //Podet_Id = txtPodet_Id.Text,
-                    //Porel_Itemcode = txtPorel_Itemcode.Text,
-                    //Porel_Pono = txtPorel_Pono.Text,
-                    //Porel_Poline = txtPorel_Poline.Text,
-                    Porel_Qty = txtPorel_Qty.Text                    
-                    //Porel_Tstamp = dtpPorel_Tstamp.Value
+                    Podet_Id = txtPodet_Id.Text,
+                    Porel_Itemcode = txtPorel_Itemcode.Text,
+                    Porel_Pono = txtPorel_Pono.Text,
+                    Porel_Poline = txtPorel_Poline.Text,
+                    Porel_Qty = txtPorel_Qty.Text,
+                    Porel_Tstamp = dtpPorel_Tstamp.Value
                 };
 
                 UpdateOrderCorrection(orderCorrection);

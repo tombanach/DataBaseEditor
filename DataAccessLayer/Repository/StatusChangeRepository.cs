@@ -10,27 +10,24 @@ using System.Threading.Tasks;
 
 namespace SmayDbEditor.DataAccessLayer.Repository
 {
-    public class StatusChangeRepository : IStatusChangeRepository
+    public class StatusChangeRepository : BaseRepository, IStatusChangeRepository
     {
-        private readonly IDbConnection _connection;
-
-        public StatusChangeRepository(IDbConnection connection)
+        public StatusChangeRepository(IDbConnection connection) : base(connection)
         {
-            _connection = connection;
         }        
 
         public StatusChangeModel GetStatus(int imphId)
         {
             var sql = $"select * from [dbo].[imphead] where imph_id = @imphId";
 
-            return _connection.QueryFirst<StatusChangeModel>(sql, new { imphId = imphId });
+            return _wmsConnection.QueryFirst<StatusChangeModel>(sql, new { imphId = imphId });
         }
 
         public IEnumerable<StatusChangeModel> GetStatuses()
         {
             var sql = $"select * from [dbo].[imphead]";
 
-            return _connection.Query<StatusChangeModel>(sql);
+            return _wmsConnection.Query<StatusChangeModel>(sql);
         }
 
         public void UpdateStatus(StatusChangeModel statusChange)
@@ -40,7 +37,7 @@ namespace SmayDbEditor.DataAccessLayer.Repository
             sb.Append($"imph_status = @imph_status ");
             sb.Append($"where imph_id = @imphId");
 
-            _connection.Execute(sb.ToString(), new { @imph_status = statusChange.imph_status, @imphId = statusChange.imph_id });
+            _wmsConnection.Execute(sb.ToString(), new { @imph_status = statusChange.imph_status, @imphId = statusChange.imph_id });
         }
     }
 }

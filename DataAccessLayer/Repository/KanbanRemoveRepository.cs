@@ -10,33 +10,30 @@ using System.Threading.Tasks;
 
 namespace SmayDbEditor.DataAccessLayer.Repository
 {
-    public class KanbanRemoveRepository : IKanbanRemoveRepository
+    public class KanbanRemoveRepository : BaseRepository, IKanbanRemoveRepository
     {
-        private readonly IDbConnection _connection;
-
-        public KanbanRemoveRepository(IDbConnection connection)
+        public KanbanRemoveRepository(IDbConnection connection) : base(connection)
         {
-            _connection = connection;
         }
 
         public KanbanRemoveModel GetKanban(int kbtrId)
         {
             var sql = $"select * from [dbo].[kbtr_rel] where kbtr_id = @kbtrId";
 
-            return _connection.QueryFirst<KanbanRemoveModel>(sql, new { kbtrId = kbtrId });
+            return _wmsConnection.QueryFirst<KanbanRemoveModel>(sql, new { kbtrId = kbtrId });
         }
 
         public IEnumerable<KanbanRemoveModel> GetKanbans()
         {
             var sql = $"select * from [WmsSmayDb_Conn].[dbo].[kbtr_rel]";
 
-            return _connection.Query<KanbanRemoveModel>(sql);
+            return _wmsConnection.Query<KanbanRemoveModel>(sql);
         }
 
         public void DeleteKanban(int kbtrId)
         {
             var sql = $"delete from dbo.kbtr_rel where kbtr_id = @kbtrId";
-            _connection.Execute(sql, new { kbtrId = kbtrId });
+            _wmsConnection.Execute(sql, new { kbtrId = kbtrId });
         }   
     }
 }

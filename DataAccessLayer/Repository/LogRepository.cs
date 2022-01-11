@@ -10,27 +10,25 @@ using System.Threading.Tasks;
 
 namespace SmayDbEditor.DataAccessLayer.Repository
 {
-    public class LogRepository : ILogRepository
+    public class LogRepository : BaseRepository, ILogRepository
     {
-        private readonly IDbConnection _connection;
-
-        public LogRepository(IDbConnection connection)
+        public LogRepository(IDbConnection connection) : base(connection)
         {
-            _connection = connection;
+
         }
 
         public LogModel GetLog(int logId)
         {
             var sql = $"select * form [dbo].[logi] where log_id = @logId";
 
-            return _connection.QueryFirst<LogModel>(sql, new { logId = logId });
+            return _wmsConnection.QueryFirst<LogModel>(sql, new { logId = logId });
         }
 
         public IEnumerable<LogModel> GetLogs()
         {
             var sql = $"select * form [dbo].[logi]";
 
-            return _connection.Query<LogModel>(sql);
+            return _wmsConnection.Query<LogModel>(sql);
         }
     }
 }

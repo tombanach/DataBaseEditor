@@ -10,33 +10,30 @@ using System.Threading.Tasks;
 
 namespace SmayDbEditor.DataAccessLayer.Repository
 {
-    public class UnlockProductionRepository : IUnlockProductionRepository
+    public class UnlockProductionRepository : BaseRepository, IUnlockProductionRepository
     {
-        private readonly IDbConnection _connection;
-
-        public UnlockProductionRepository(IDbConnection connection)
+        public UnlockProductionRepository(IDbConnection connection) : base(connection)
         {
-            _connection = connection;
         }
 
         public UnlockProductionModel GetDocument(int procCode)
         {
             var sql = $"select * from [SmayDB].[dbo].[P000_Locks01] where proccode = @procCode";
 
-            return _connection.QueryFirst<UnlockProductionModel>(sql, new { procCode = procCode});
+            return _wmsConnection.QueryFirst<UnlockProductionModel>(sql, new { procCode = procCode});
         }
 
         public IEnumerable<UnlockProductionModel> GetDocuments()
         {
             var sql = $"select * from [SmayDB].[dbo].[P000_Locks01]";            
 
-            return _connection.Query<UnlockProductionModel>(sql);
+            return _wmsConnection.Query<UnlockProductionModel>(sql);
         }
 
         public void DeleteDocument(int procCode)
         {
             var sql = $"delete from [SmayDB].[dbo].[P000_Locks01] where proccode = @procCode";
-            _connection.Execute(sql, new { procCode = procCode });
+            _wmsConnection.Execute(sql, new { procCode = procCode });
         }
     }
 }
