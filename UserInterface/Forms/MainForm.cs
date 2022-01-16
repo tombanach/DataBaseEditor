@@ -15,7 +15,6 @@ using SmayDbEditor.UserInterface.Forms.OrdersAddressChange;
 using SmayDbEditor.UserInterface.Forms.PrintersAdding;
 using SmayDbEditor.UserInterface.Forms.Logs;
 using SmayDbEditor.UserInterface.Forms.UnlockProductions;
-using SmayDbEditor.UserInterface.Forms.OrdersStatistics;
 
 namespace SmayDbEditor.UserInterface.Forms
 {
@@ -30,7 +29,7 @@ namespace SmayDbEditor.UserInterface.Forms
         private TabPage _tpPrintersAdding;
         private TabPage _tpLogs;
         private TabPage _tpUnlockProductions;
-        private TabPage _tpOrdersStatistics;
+        private TabPage _tpRegister;
 
         #endregion
         #region Ctor
@@ -118,20 +117,7 @@ namespace SmayDbEditor.UserInterface.Forms
             {
                 tcTabs.SelectedTab = _tpUnlockProductions;
             }
-        }
-
-        private void btnOrdersStatistics_Click(object sender, EventArgs e)
-        {
-            if (OrdersStatisticsForm.IsNull)
-            {
-                _tpOrdersStatistics = new TabPage();
-                ShowFormInTabPage(_tpOrdersStatistics, OrdersStatisticsForm.Instance);
-            }
-            else
-            {
-                tcTabs.SelectedTab = _tpOrdersStatistics;
-            }
-        }
+        }        
 
         private void btnLogs_Click(object sender, EventArgs e)
         {
@@ -145,7 +131,20 @@ namespace SmayDbEditor.UserInterface.Forms
                 tcTabs.SelectedTab = _tpLogs;
             }
         }
-        
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            if (RegisterForm.IsNull)
+            {
+                _tpRegister = new TabPage();
+                ShowFormInTabPage(_tpRegister, RegisterForm.Instance);
+            }
+            else
+            {
+                tcTabs.SelectedTab = _tpRegister;
+            }
+        }
+
 
         // Red X button to close tabs on MainForm
         private void tcTabs_DrawItem(object sender, DrawItemEventArgs e)
@@ -207,10 +206,6 @@ namespace SmayDbEditor.UserInterface.Forms
             tcTabs.SelectedTab = tpTab;
         }
 
-
-
-        #endregion
-
-        
+        #endregion               
     }
 }

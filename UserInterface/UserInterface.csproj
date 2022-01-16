@@ -191,12 +191,6 @@
     <Compile Include="Forms\OrdersCorrection\OrdersCorrectionForm.Designer.cs">
       <DependentUpon>OrdersCorrectionForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\OrdersStatistics\OrdersStatisticsForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\OrdersStatistics\OrdersStatisticsForm.Designer.cs">
-      <DependentUpon>OrdersStatisticsForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\PrintersAdding\PrinterAddingAddForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,6 +208,12 @@
     </Compile>
     <Compile Include="Forms\PrintersAdding\PrintersAddingForm.Designer.cs">
       <DependentUpon>PrintersAddingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RegisterForm.Designer.cs">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\StatusChanges\StatusChangeEditForm.cs">
       <SubType>Form</SubType>
@@ -273,9 +273,6 @@
     <EmbeddedResource Include="Forms\OrdersCorrection\OrdersCorrectionForm.resx">
       <DependentUpon>OrdersCorrectionForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\OrdersStatistics\OrdersStatisticsForm.resx">
-      <DependentUpon>OrdersStatisticsForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\PrintersAdding\PrinterAddingAddForm.resx">
       <DependentUpon>PrinterAddingAddForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -284,6 +281,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PrintersAdding\PrintersAddingForm.resx">
       <DependentUpon>PrintersAddingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RegisterForm.resx">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\StatusChanges\StatusChangeEditForm.resx">
       <DependentUpon>StatusChangeEditForm.cs</DependentUpon>

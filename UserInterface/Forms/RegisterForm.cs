@@ -9,20 +9,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SmayDbEditor.UserInterface.Forms.OrdersStatistics
+namespace SmayDbEditor.UserInterface.Forms
 {
-    public partial class OrdersStatisticsForm : BaseForm
+    public partial class RegisterForm : BaseForm
     {
+        private static RegisterForm _instance = null;
 
-        private static OrdersStatisticsForm _instance = null;
+        public RegisterForm()
+        {
+            InitializeComponent();
+        }
 
-        public static OrdersStatisticsForm Instance
+        public static RegisterForm Instance
         {
             get
             {
                 if (_instance == null)
                 {
-                    _instance = new OrdersStatisticsForm();
+                    _instance = new RegisterForm();
                 }
                 return _instance;
             }
@@ -40,12 +44,12 @@ namespace SmayDbEditor.UserInterface.Forms.OrdersStatistics
             }
         }
 
-        public OrdersStatisticsForm()
+        private void btnAddRegister_Click(object sender, EventArgs e)
         {
-            InitializeComponent();
+
         }
 
-        private void OrdersStatisticsForm_FormClosed(object sender, FormClosedEventArgs e)
+        private void btnCancelRegister_Click(object sender, EventArgs e)
         {
             _instance = null;
         }

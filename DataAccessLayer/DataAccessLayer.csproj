@@ -72,7 +72,6 @@
     <Compile Include="Interfaces\ILogRepository.cs" />
     <Compile Include="Interfaces\IOrderAddressChangeRepository.cs" />
     <Compile Include="Interfaces\IOrderCorrectionRepository.cs" />
-    <Compile Include="Interfaces\IOrderStatisticRepository.cs" />
     <Compile Include="Interfaces\IStatusChangeRepository.cs" />
     <Compile Include="Interfaces\IUnlockProductionRepository.cs" />
     <Compile Include="Models\EntityModel.cs" />
@@ -80,7 +79,6 @@
     <Compile Include="Models\LogModel.cs" />
     <Compile Include="Models\OrderAddressChangeModel.cs" />
     <Compile Include="Models\OrderCorrectionModel.cs" />
-    <Compile Include="Models\OrderStatisticModel.cs" />
     <Compile Include="Models\PrinterAddingModel.cs" />
     <Compile Include="Models\StatusChangeModel.cs" />
     <Compile Include="Models\UnlockProductionModel.cs" />
@@ -97,7 +95,6 @@
     <Compile Include="ViewModel\LogViewModel.cs" />
     <Compile Include="ViewModel\OrderAddressChangeViewModel.cs" />
     <Compile Include="ViewModel\OrderCorrectionViewModel.cs" />
-    <Compile Include="ViewModel\OrderStatisticViewModel.cs" />
     <Compile Include="ViewModel\PrinterAddingViewModel.cs" />
     <Compile Include="ViewModel\StatusChangeViewModel.cs" />
     <Compile Include="ViewModel\UnlockProductionViewModel.cs" />

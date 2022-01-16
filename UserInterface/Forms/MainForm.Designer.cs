@@ -46,9 +46,9 @@ namespace SmayDbEditor.UserInterface.Forms
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.btnOrdersCorrection = new System.Windows.Forms.Button();
             this.tpStatistics = new System.Windows.Forms.TabPage();
+            this.btnRegister = new System.Windows.Forms.Button();
+            this.splitter7 = new System.Windows.Forms.Splitter();
             this.btnLogs = new System.Windows.Forms.Button();
-            this.splitter8 = new System.Windows.Forms.Splitter();
-            this.btnOrdersStatistics = new System.Windows.Forms.Button();
             this.pMain = new System.Windows.Forms.Panel();
             this.tcTabs = new System.Windows.Forms.TabControl();
             this.tsslDatabase = new System.Windows.Forms.ToolStripStatusLabel();
@@ -115,9 +115,9 @@ namespace SmayDbEditor.UserInterface.Forms
             // 
             this.btnUnlockProductions.BackColor = System.Drawing.Color.White;
             this.btnUnlockProductions.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnUnlockProductions.Location = new System.Drawing.Point(3, 281);
+            this.btnUnlockProductions.Location = new System.Drawing.Point(3, 306);
             this.btnUnlockProductions.Name = "btnUnlockProductions";
-            this.btnUnlockProductions.Size = new System.Drawing.Size(125, 63);
+            this.btnUnlockProductions.Size = new System.Drawing.Size(125, 59);
             this.btnUnlockProductions.TabIndex = 10;
             this.btnUnlockProductions.Text = "Odblokowanie produkcji";
             this.btnUnlockProductions.UseVisualStyleBackColor = false;
@@ -126,7 +126,7 @@ namespace SmayDbEditor.UserInterface.Forms
             // splitter5
             // 
             this.splitter5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitter5.Location = new System.Drawing.Point(3, 276);
+            this.splitter5.Location = new System.Drawing.Point(3, 301);
             this.splitter5.Name = "splitter5";
             this.splitter5.Size = new System.Drawing.Size(125, 5);
             this.splitter5.TabIndex = 9;
@@ -137,9 +137,9 @@ namespace SmayDbEditor.UserInterface.Forms
             this.btnPrintersAdding.BackColor = System.Drawing.Color.White;
             this.btnPrintersAdding.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPrintersAdding.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnPrintersAdding.Location = new System.Drawing.Point(3, 230);
+            this.btnPrintersAdding.Location = new System.Drawing.Point(3, 250);
             this.btnPrintersAdding.Name = "btnPrintersAdding";
-            this.btnPrintersAdding.Size = new System.Drawing.Size(125, 46);
+            this.btnPrintersAdding.Size = new System.Drawing.Size(125, 51);
             this.btnPrintersAdding.TabIndex = 8;
             this.btnPrintersAdding.Text = "Serwer wydruku";
             this.btnPrintersAdding.UseVisualStyleBackColor = false;
@@ -148,7 +148,7 @@ namespace SmayDbEditor.UserInterface.Forms
             // splitter4
             // 
             this.splitter4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitter4.Location = new System.Drawing.Point(3, 225);
+            this.splitter4.Location = new System.Drawing.Point(3, 245);
             this.splitter4.Name = "splitter4";
             this.splitter4.Size = new System.Drawing.Size(125, 5);
             this.splitter4.TabIndex = 7;
@@ -159,9 +159,9 @@ namespace SmayDbEditor.UserInterface.Forms
             this.btnOrdersAddressChange.BackColor = System.Drawing.Color.White;
             this.btnOrdersAddressChange.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnOrdersAddressChange.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnOrdersAddressChange.Location = new System.Drawing.Point(3, 173);
+            this.btnOrdersAddressChange.Location = new System.Drawing.Point(3, 188);
             this.btnOrdersAddressChange.Name = "btnOrdersAddressChange";
-            this.btnOrdersAddressChange.Size = new System.Drawing.Size(125, 52);
+            this.btnOrdersAddressChange.Size = new System.Drawing.Size(125, 57);
             this.btnOrdersAddressChange.TabIndex = 6;
             this.btnOrdersAddressChange.Text = "Zmiana adresu zamówienia";
             this.btnOrdersAddressChange.UseVisualStyleBackColor = false;
@@ -170,7 +170,7 @@ namespace SmayDbEditor.UserInterface.Forms
             // splitter3
             // 
             this.splitter3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitter3.Location = new System.Drawing.Point(3, 168);
+            this.splitter3.Location = new System.Drawing.Point(3, 183);
             this.splitter3.Name = "splitter3";
             this.splitter3.Size = new System.Drawing.Size(125, 5);
             this.splitter3.TabIndex = 5;
@@ -180,9 +180,9 @@ namespace SmayDbEditor.UserInterface.Forms
             // 
             this.btnKanbansRemove.BackColor = System.Drawing.Color.White;
             this.btnKanbansRemove.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnKanbansRemove.Location = new System.Drawing.Point(3, 115);
+            this.btnKanbansRemove.Location = new System.Drawing.Point(3, 125);
             this.btnKanbansRemove.Name = "btnKanbansRemove";
-            this.btnKanbansRemove.Size = new System.Drawing.Size(125, 53);
+            this.btnKanbansRemove.Size = new System.Drawing.Size(125, 58);
             this.btnKanbansRemove.TabIndex = 4;
             this.btnKanbansRemove.Text = "Usuwanie kanbanów";
             this.btnKanbansRemove.UseVisualStyleBackColor = false;
@@ -191,7 +191,7 @@ namespace SmayDbEditor.UserInterface.Forms
             // splitter2
             // 
             this.splitter2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitter2.Location = new System.Drawing.Point(3, 110);
+            this.splitter2.Location = new System.Drawing.Point(3, 120);
             this.splitter2.Name = "splitter2";
             this.splitter2.Size = new System.Drawing.Size(125, 5);
             this.splitter2.TabIndex = 3;
@@ -201,9 +201,9 @@ namespace SmayDbEditor.UserInterface.Forms
             // 
             this.btnStatusChange.BackColor = System.Drawing.Color.White;
             this.btnStatusChange.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnStatusChange.Location = new System.Drawing.Point(3, 61);
+            this.btnStatusChange.Location = new System.Drawing.Point(3, 66);
             this.btnStatusChange.Name = "btnStatusChange";
-            this.btnStatusChange.Size = new System.Drawing.Size(125, 49);
+            this.btnStatusChange.Size = new System.Drawing.Size(125, 54);
             this.btnStatusChange.TabIndex = 2;
             this.btnStatusChange.Text = "Zmiana statusu";
             this.btnStatusChange.UseVisualStyleBackColor = false;
@@ -212,7 +212,7 @@ namespace SmayDbEditor.UserInterface.Forms
             // splitter1
             // 
             this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitter1.Location = new System.Drawing.Point(3, 56);
+            this.splitter1.Location = new System.Drawing.Point(3, 61);
             this.splitter1.Name = "splitter1";
             this.splitter1.Size = new System.Drawing.Size(125, 5);
             this.splitter1.TabIndex = 1;
@@ -224,7 +224,7 @@ namespace SmayDbEditor.UserInterface.Forms
             this.btnOrdersCorrection.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnOrdersCorrection.Location = new System.Drawing.Point(3, 3);
             this.btnOrdersCorrection.Name = "btnOrdersCorrection";
-            this.btnOrdersCorrection.Size = new System.Drawing.Size(125, 53);
+            this.btnOrdersCorrection.Size = new System.Drawing.Size(125, 58);
             this.btnOrdersCorrection.TabIndex = 0;
             this.btnOrdersCorrection.Text = "Korekta zamówienia";
             this.btnOrdersCorrection.UseVisualStyleBackColor = false;
@@ -232,50 +232,50 @@ namespace SmayDbEditor.UserInterface.Forms
             // 
             // tpStatistics
             // 
+            this.tpStatistics.Controls.Add(this.btnRegister);
+            this.tpStatistics.Controls.Add(this.splitter7);
             this.tpStatistics.Controls.Add(this.btnLogs);
-            this.tpStatistics.Controls.Add(this.splitter8);
-            this.tpStatistics.Controls.Add(this.btnOrdersStatistics);
             this.tpStatistics.Location = new System.Drawing.Point(4, 24);
             this.tpStatistics.Name = "tpStatistics";
             this.tpStatistics.Padding = new System.Windows.Forms.Padding(3);
             this.tpStatistics.Size = new System.Drawing.Size(131, 511);
             this.tpStatistics.TabIndex = 1;
-            this.tpStatistics.Text = "Statystyki";
+            this.tpStatistics.Text = "Dodatkowe";
             this.tpStatistics.UseVisualStyleBackColor = true;
+            // 
+            // btnRegister
+            // 
+            this.btnRegister.BackColor = System.Drawing.Color.White;
+            this.btnRegister.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRegister.Location = new System.Drawing.Point(3, 71);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(125, 47);
+            this.btnRegister.TabIndex = 4;
+            this.btnRegister.Text = "Dodaj użytkownika";
+            this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            // 
+            // splitter7
+            // 
+            this.splitter7.BackColor = System.Drawing.Color.White;
+            this.splitter7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.splitter7.Location = new System.Drawing.Point(3, 49);
+            this.splitter7.Name = "splitter7";
+            this.splitter7.Size = new System.Drawing.Size(125, 22);
+            this.splitter7.TabIndex = 3;
+            this.splitter7.TabStop = false;
             // 
             // btnLogs
             // 
             this.btnLogs.BackColor = System.Drawing.Color.White;
             this.btnLogs.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLogs.Location = new System.Drawing.Point(3, 46);
+            this.btnLogs.Location = new System.Drawing.Point(3, 3);
             this.btnLogs.Name = "btnLogs";
-            this.btnLogs.Size = new System.Drawing.Size(125, 40);
+            this.btnLogs.Size = new System.Drawing.Size(125, 46);
             this.btnLogs.TabIndex = 2;
             this.btnLogs.Text = "Logi";
             this.btnLogs.UseVisualStyleBackColor = false;
             this.btnLogs.Click += new System.EventHandler(this.btnLogs_Click);
-            // 
-            // splitter8
-            // 
-            this.splitter8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitter8.Location = new System.Drawing.Point(3, 43);
-            this.splitter8.Name = "splitter8";
-            this.splitter8.Size = new System.Drawing.Size(125, 3);
-            this.splitter8.TabIndex = 1;
-            this.splitter8.TabStop = false;
-            // 
-            // btnOrdersStatistics
-            // 
-            this.btnOrdersStatistics.BackColor = System.Drawing.Color.White;
-            this.btnOrdersStatistics.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnOrdersStatistics.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnOrdersStatistics.Location = new System.Drawing.Point(3, 3);
-            this.btnOrdersStatistics.Name = "btnOrdersStatistics";
-            this.btnOrdersStatistics.Size = new System.Drawing.Size(125, 40);
-            this.btnOrdersStatistics.TabIndex = 0;
-            this.btnOrdersStatistics.Text = "Statystyki zamówień";
-            this.btnOrdersStatistics.UseVisualStyleBackColor = false;
-            this.btnOrdersStatistics.Click += new System.EventHandler(this.btnOrdersStatistics_Click);
             // 
             // pMain
             // 
@@ -357,12 +357,12 @@ namespace SmayDbEditor.UserInterface.Forms
         private System.Windows.Forms.ToolStripStatusLabel tsslVersion;
         private System.Windows.Forms.ToolStripStatusLabel tsslDatabase;
         private System.Windows.Forms.ToolStripStatusLabel tsslUser;
-        private System.Windows.Forms.Button btnLogs;
-        private System.Windows.Forms.Splitter splitter8;
-        private System.Windows.Forms.Button btnOrdersStatistics;
         private System.Windows.Forms.TabControl tcTabs;
         private System.Windows.Forms.Button btnPrintersAdding;
         private System.Windows.Forms.Button btnUnlockProductions;
         private System.Windows.Forms.Splitter splitter5;
+        private System.Windows.Forms.Button btnRegister;
+        private System.Windows.Forms.Splitter splitter7;
+        private System.Windows.Forms.Button btnLogs;
     }
 }
