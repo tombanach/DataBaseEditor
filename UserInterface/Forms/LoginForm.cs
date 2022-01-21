@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SmayDbEditor.UserInterface.Forms.Base;
+using SmayDbEditor.UserInterface.Helpers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,14 +13,14 @@ using System.Windows.Forms;
 
 namespace SmayDbEditor.UserInterface.Forms
 {
-    public partial class LoginForm : Form
+    public partial class LoginForm : BaseForm
     {
         public LoginForm()
         {
             InitializeComponent();
 
-            txtUserName.Text = "admin";
-            txtPassword.Text = "admin";
+            txtUserName.Text = "weekend";
+            txtPassword.Text = "Dupa54321";
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -30,19 +32,17 @@ namespace SmayDbEditor.UserInterface.Forms
         {
             if (isValid())
             {
-                using (SqlConnection conn = new SqlConnection(@"Data Source=localhost;Database=WmsSmayDb_Conn;User Id=dbEditorUser;Password=Dupa54321;"))
-                //using (SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Database=Wms_SmayDb_Conn;User Id=dbEditorUser;Password=Dupa54321;")) 
+                var username = txtUserName.Text;
+                var password = txtPassword.Text;
+
+                var userViewModel = MappingHelper.MapUserModelToUserViewModel(AuthRepository.Login(username, password));
+                if (userViewModel != null)
                 {
-                    string query = "SELECT * FROM Login WHERE Username = '" + txtUserName.Text.Trim() + "' AND Password = '" + txtPassword.Text.Trim() + "'";
-                    SqlDataAdapter sda = new SqlDataAdapter(query, conn);
-                    DataTable dta = new DataTable();
-                    sda.Fill(dta);
-                    if (dta.Rows.Count == 1)
-                    {
-                        MainForm mainForm = new MainForm();
-                        this.Hide();
-                        mainForm.Show();
-                    }
+                    UserHelper.ActiveUser = userViewModel;
+
+                    MainForm mainForm = new MainForm();
+                    this.Hide();
+                    mainForm.Show();
                 }
             }
         }

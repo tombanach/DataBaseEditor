@@ -32,6 +32,8 @@ namespace SmayDbEditor.UserInterface.Forms
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.ssMain = new System.Windows.Forms.StatusStrip();
             this.tsslVersion = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tsslDatabase = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tsslUser = new System.Windows.Forms.ToolStripStatusLabel();
             this.tcMain = new System.Windows.Forms.TabControl();
             this.tpFunctions = new System.Windows.Forms.TabPage();
             this.btnUnlockProductions = new System.Windows.Forms.Button();
@@ -51,8 +53,6 @@ namespace SmayDbEditor.UserInterface.Forms
             this.btnLogs = new System.Windows.Forms.Button();
             this.pMain = new System.Windows.Forms.Panel();
             this.tcTabs = new System.Windows.Forms.TabControl();
-            this.tsslDatabase = new System.Windows.Forms.ToolStripStatusLabel();
-            this.tsslUser = new System.Windows.Forms.ToolStripStatusLabel();
             this.ssMain.SuspendLayout();
             this.tcMain.SuspendLayout();
             this.tpFunctions.SuspendLayout();
@@ -77,6 +77,20 @@ namespace SmayDbEditor.UserInterface.Forms
             this.tsslVersion.Name = "tsslVersion";
             this.tsslVersion.Size = new System.Drawing.Size(81, 17);
             this.tsslVersion.Text = "Wersja: 1.0.0.0";
+            // 
+            // tsslDatabase
+            // 
+            this.tsslDatabase.Image = ((System.Drawing.Image)(resources.GetObject("tsslDatabase.Image")));
+            this.tsslDatabase.Name = "tsslDatabase";
+            this.tsslDatabase.Size = new System.Drawing.Size(163, 17);
+            this.tsslDatabase.Text = "Baza: Wms_SmayDB_Conn";
+            // 
+            // tsslUser
+            // 
+            this.tsslUser.Image = global::SmayDbEditor.UserInterface.Properties.Resources.User_16;
+            this.tsslUser.Name = "tsslUser";
+            this.tsslUser.Size = new System.Drawing.Size(158, 17);
+            this.tsslUser.Text = "Użytkownik: dbEditorUser";
             // 
             // tcMain
             // 
@@ -301,20 +315,6 @@ namespace SmayDbEditor.UserInterface.Forms
             this.tcTabs.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tcTabs_DrawItem);
             this.tcTabs.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tcTabs_MouseDown);
             // 
-            // tsslDatabase
-            // 
-            this.tsslDatabase.Image = ((System.Drawing.Image)(resources.GetObject("tsslDatabase.Image")));
-            this.tsslDatabase.Name = "tsslDatabase";
-            this.tsslDatabase.Size = new System.Drawing.Size(163, 16);
-            this.tsslDatabase.Text = "Baza: Wms_SmayDB_Conn";
-            // 
-            // tsslUser
-            // 
-            this.tsslUser.Image = global::SmayDbEditor.UserInterface.Properties.Resources.User_16;
-            this.tsslUser.Name = "tsslUser";
-            this.tsslUser.Size = new System.Drawing.Size(158, 16);
-            this.tsslUser.Text = "Użytkownik: dbEditorUser";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -324,10 +324,7 @@ namespace SmayDbEditor.UserInterface.Forms
             this.Controls.Add(this.tcMain);
             this.Controls.Add(this.ssMain);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MainForm";
-            this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Smay DB Editor";
             this.ssMain.ResumeLayout(false);
             this.ssMain.PerformLayout();

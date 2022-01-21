@@ -1,5 +1,6 @@
 ﻿using SmayDbEditor.DataAccessLayer;
 using SmayDbEditor.DataAccessLayer.Interfaces;
+using SmayDbEditor.DataAccessLayer.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -113,5 +114,20 @@ namespace SmayDbEditor.UserInterface.Forms.Base
 
 
         #endregion
+
+
+        private IAuthRepository _authRepository;
+
+        protected IAuthRepository AuthRepository
+        {
+            get
+            {
+                if (_authRepository == null)
+                {
+                    _authRepository = (IAuthRepository)Program.ServiceProvider.GetService(typeof(IAuthRepository));
+                }
+                return _authRepository;
+            }
+        }
     }
 }

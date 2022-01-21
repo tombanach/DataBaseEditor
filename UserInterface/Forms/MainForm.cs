@@ -15,10 +15,11 @@ using SmayDbEditor.UserInterface.Forms.OrdersAddressChange;
 using SmayDbEditor.UserInterface.Forms.PrintersAdding;
 using SmayDbEditor.UserInterface.Forms.Logs;
 using SmayDbEditor.UserInterface.Forms.UnlockProductions;
+using SmayDbEditor.UserInterface.Forms.Base;
 
 namespace SmayDbEditor.UserInterface.Forms
 {
-    public partial class MainForm : Form
+    public partial class MainForm : BaseForm
     {
         #region Fields
 
@@ -36,6 +37,12 @@ namespace SmayDbEditor.UserInterface.Forms
         public MainForm()
         {
             InitializeComponent();
+            Init();
+        }
+
+        private void Init()
+        {
+            tsslUser.Text = UserHelper.ActiveUser.Username;
         }
 
         #endregion
@@ -134,6 +141,8 @@ namespace SmayDbEditor.UserInterface.Forms
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
+            RegisterForm frm = new RegisterForm();
+
             if (RegisterForm.IsNull)
             {
                 _tpRegister = new TabPage();

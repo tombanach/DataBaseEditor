@@ -1,4 +1,5 @@
-﻿using SmayDbEditor.UserInterface.Forms.Base;
+﻿using SmayDbEditor.DataAccessLayer.Interfaces;
+using SmayDbEditor.UserInterface.Forms.Base;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +15,6 @@ namespace SmayDbEditor.UserInterface.Forms
     public partial class RegisterForm : BaseForm
     {
         private static RegisterForm _instance = null;
-
         public RegisterForm()
         {
             InitializeComponent();
@@ -46,7 +46,11 @@ namespace SmayDbEditor.UserInterface.Forms
 
         private void btnAddRegister_Click(object sender, EventArgs e)
         {
+            var username = txtLoginUser.Text;
+            var password = txtPasswordUser.Text;
 
+            var result = AuthRepository.Register(username, password);
+            MessageBox.Show($"Uzytkownik {result.Username} zostal dodany");
         }
 
         private void btnCancelRegister_Click(object sender, EventArgs e)

@@ -219,7 +219,16 @@ namespace SmayDbEditor.UserInterface.Helpers
 
             return unlockProductionsViewModel;
         }
-        
+
         #endregion
+
+        public static UserViewModel MapUserModelToUserViewModel(UserModel userModel)
+        {
+            return new UserViewModel
+            {
+                Id = userModel.Id,
+                Username = userModel.Username
+            };
+        }
     }
 }
