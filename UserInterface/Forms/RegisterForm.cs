@@ -51,11 +51,6 @@ namespace SmayDbEditor.UserInterface.Forms
 
             var result = AuthRepository.Register(username, password);
             MessageBox.Show($"Uzytkownik {result.Username} zostal dodany");
-        }
-
-        private void btnCancelRegister_Click(object sender, EventArgs e)
-        {
-            _instance = null;
-        }
+        }        
     }
 }
