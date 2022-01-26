@@ -47,7 +47,7 @@ namespace SmayDbEditor.UserInterface.Forms
             this.btnStatusChange = new System.Windows.Forms.Button();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.btnOrdersCorrection = new System.Windows.Forms.Button();
-            this.tpStatistics = new System.Windows.Forms.TabPage();
+            this.tpAddictional = new System.Windows.Forms.TabPage();
             this.btnRegister = new System.Windows.Forms.Button();
             this.splitter7 = new System.Windows.Forms.Splitter();
             this.btnLogs = new System.Windows.Forms.Button();
@@ -56,7 +56,7 @@ namespace SmayDbEditor.UserInterface.Forms
             this.ssMain.SuspendLayout();
             this.tcMain.SuspendLayout();
             this.tpFunctions.SuspendLayout();
-            this.tpStatistics.SuspendLayout();
+            this.tpAddictional.SuspendLayout();
             this.pMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,7 +95,7 @@ namespace SmayDbEditor.UserInterface.Forms
             // tcMain
             // 
             this.tcMain.Controls.Add(this.tpFunctions);
-            this.tcMain.Controls.Add(this.tpStatistics);
+            this.tcMain.Controls.Add(this.tpAddictional);
             this.tcMain.Dock = System.Windows.Forms.DockStyle.Left;
             this.tcMain.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.tcMain.Location = new System.Drawing.Point(0, 0);
@@ -244,18 +244,18 @@ namespace SmayDbEditor.UserInterface.Forms
             this.btnOrdersCorrection.UseVisualStyleBackColor = false;
             this.btnOrdersCorrection.Click += new System.EventHandler(this.btnOrdersCorrection_Click);
             // 
-            // tpStatistics
+            // tpAddictional
             // 
-            this.tpStatistics.Controls.Add(this.btnRegister);
-            this.tpStatistics.Controls.Add(this.splitter7);
-            this.tpStatistics.Controls.Add(this.btnLogs);
-            this.tpStatistics.Location = new System.Drawing.Point(4, 24);
-            this.tpStatistics.Name = "tpStatistics";
-            this.tpStatistics.Padding = new System.Windows.Forms.Padding(3);
-            this.tpStatistics.Size = new System.Drawing.Size(131, 511);
-            this.tpStatistics.TabIndex = 1;
-            this.tpStatistics.Text = "Dodatkowe";
-            this.tpStatistics.UseVisualStyleBackColor = true;
+            this.tpAddictional.Controls.Add(this.btnRegister);
+            this.tpAddictional.Controls.Add(this.splitter7);
+            this.tpAddictional.Controls.Add(this.btnLogs);
+            this.tpAddictional.Location = new System.Drawing.Point(4, 24);
+            this.tpAddictional.Name = "tpAddictional";
+            this.tpAddictional.Padding = new System.Windows.Forms.Padding(3);
+            this.tpAddictional.Size = new System.Drawing.Size(131, 511);
+            this.tpAddictional.TabIndex = 1;
+            this.tpAddictional.Text = "Dodatkowe";
+            this.tpAddictional.UseVisualStyleBackColor = true;
             // 
             // btnRegister
             // 
@@ -330,7 +330,7 @@ namespace SmayDbEditor.UserInterface.Forms
             this.ssMain.PerformLayout();
             this.tcMain.ResumeLayout(false);
             this.tpFunctions.ResumeLayout(false);
-            this.tpStatistics.ResumeLayout(false);
+            this.tpAddictional.ResumeLayout(false);
             this.pMain.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -341,7 +341,7 @@ namespace SmayDbEditor.UserInterface.Forms
         private System.Windows.Forms.StatusStrip ssMain;
         private System.Windows.Forms.TabControl tcMain;
         private System.Windows.Forms.TabPage tpFunctions;
-        private System.Windows.Forms.TabPage tpStatistics;
+        private System.Windows.Forms.TabPage tpAddictional;
         private System.Windows.Forms.Button btnOrdersCorrection;
         private System.Windows.Forms.Panel pMain;
         private System.Windows.Forms.Button btnStatusChange;

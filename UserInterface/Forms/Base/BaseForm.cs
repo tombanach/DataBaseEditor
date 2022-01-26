@@ -129,5 +129,19 @@ namespace SmayDbEditor.UserInterface.Forms.Base
                 return _authRepository;
             }
         }
+
+        private IUserRepository _userRepository;
+
+        protected IUserRepository UserRepository
+        {
+            get
+            {
+                if (_userRepository == null)
+                {
+                    _userRepository = (IUserRepository)Program.ServiceProvider.GetService(typeof(IUserRepository));
+                }
+                return _userRepository;
+            }
+        }
     }
 }

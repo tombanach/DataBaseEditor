@@ -2,6 +2,7 @@
 using SmayDbEditor.DataAccessLayer.Interfaces;
 using SmayDbEditor.DataAccessLayer.Models;
 using System;
+using System.Collections.Generic;
 using System.Data;
 
 namespace SmayDbEditor.DataAccessLayer.Repository
@@ -14,18 +15,29 @@ namespace SmayDbEditor.DataAccessLayer.Repository
 
         public UserModel AddUser(UserModel userModel)
         {
-            var sql = $"insert into dbo.Users(Username, PwdHash, PwdSalt, DateCreated) " +
+            var sqlInsertUser = $"insert into dbo.Users(Username, PwdHash, PwdSalt, DateCreated) " +
                 $"output inserted.* " +
                 $"values(@username, @pwdHash, @pwdSalt, getdate())";
 
-            return _wmsConnection.QuerySingle<UserModel>(
-                sql,
-                new 
+            var createdUser = _wmsConnection.QuerySingle<UserModel>(sqlInsertUser, new
+            {
+                @username = userModel.Username,
+                @pwdHash = userModel.PwdHash,
+                @pwdSalt = userModel.PwdSalt,
+            });
+
+            foreach (var userGroup in userModel.UserGroups)
+            {
+                var sqlInsertUserUserGroup = $"insert into dbo.User_UserGroups(UserId, GroupId) " +
+                    $"values(@userId, @groupId)";
+
+                _wmsConnection.Execute(sqlInsertUserUserGroup, new 
                 {
-                    @username = userModel.Username,
-                    @pwdHash = userModel.PwdHash,
-                    @pwdSalt = userModel.PwdSalt,
+                    @userId = createdUser.Id, @groupId = userGroup.Id 
                 });
+            }
+
+            return createdUser;
         }
 
         public UserModel GetUserByUsername(string username)
@@ -34,13 +46,34 @@ namespace SmayDbEditor.DataAccessLayer.Repository
             {
                 var sql = $"select Id, Username, PwdHash, PwdSalt, DateCreated from dbo.Users where Username = @username";
 
-                return _wmsConnection.QueryFirst<UserModel>(sql, new { @username = username });
+                var user = _wmsConnection.QueryFirst<UserModel>(sql, new { @username = username });
+                user.UserGroups = GetUserGroupsForUser(user.Id);
+
+                return user;
             }
             catch (InvalidOperationException)
             {
                 // user does not exist
                 return null;
             }
+        }
+
+        public IEnumerable<UserGroupModel> GetUserGroups()
+        {
+            var sql = $"select [Id], [GroupName] from dbo.UserGroups order by [Order]";
+
+            return _wmsConnection.Query<UserGroupModel>(sql, null);
+        }
+
+        public IEnumerable<UserGroupModel> GetUserGroupsForUser(int userId)
+        {
+            var sql = $"select ug.Id, ug.GroupName " +
+                $"from dbo.Users u " +
+                $"join dbo.User_UserGroups uug on u.Id = uug.UserId " +
+                $"join dbo.UserGroups ug on uug.GroupId = ug.Id " +
+                $"where u.Id = @userId";
+
+            return _wmsConnection.Query<UserGroupModel>(sql, new { @userId = userId });
         }
     }
 }

@@ -1,4 +1,7 @@
-﻿using System;
+﻿using SmayDbEditor.DataAccessLayer.Utils;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace SmayDbEditor.DataAccessLayer.Models
 {
@@ -9,5 +12,6 @@ namespace SmayDbEditor.DataAccessLayer.Models
         public string PwdHash { get; set; }
         public string PwdSalt { get; set; }
         public DateTime DateCreated { get; set; }
+        public IEnumerable<UserGroupModel> UserGroups { get; set; }
     }
 }

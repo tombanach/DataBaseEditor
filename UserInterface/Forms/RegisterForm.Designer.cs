@@ -73,6 +73,7 @@
             this.txtPasswordUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtPasswordUser.Location = new System.Drawing.Point(360, 131);
             this.txtPasswordUser.Name = "txtPasswordUser";
+            this.txtPasswordUser.PasswordChar = '*';
             this.txtPasswordUser.Size = new System.Drawing.Size(163, 29);
             this.txtPasswordUser.TabIndex = 3;
             // 

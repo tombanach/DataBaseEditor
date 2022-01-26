@@ -227,7 +227,8 @@ namespace SmayDbEditor.UserInterface.Helpers
             return new UserViewModel
             {
                 Id = userModel.Id,
-                Username = userModel.Username
+                Username = userModel.Username,
+                UserGroups = userModel.UserGroups,
             };
         }
     }

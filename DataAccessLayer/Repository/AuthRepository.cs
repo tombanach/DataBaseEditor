@@ -1,6 +1,7 @@
 ﻿using SmayDbEditor.DataAccessLayer.Interfaces;
 using SmayDbEditor.DataAccessLayer.Models;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Text;
@@ -32,8 +33,13 @@ namespace SmayDbEditor.DataAccessLayer.Repository
             return user;
         }
 
-        public UserModel Register(string username, string password)
+        public UserModel Register(string username, string password, UserGroupModel group)
         {
+            if (username.Length < 4 || password.Length < 5)
+            {
+                throw new ValidationException("Nazwa użytkownika lub haslo sa za krotkie");
+            }
+
             var user = new UserModel
             {
                 Username = username,
@@ -48,6 +54,11 @@ namespace SmayDbEditor.DataAccessLayer.Repository
 
             user.PwdHash = hashSaltResult.Hash;
             user.PwdSalt = hashSaltResult.Salt;
+
+            user.UserGroups = new List<UserGroupModel>
+            {
+                group
+            };
 
             var createdUser = _userRepository.AddUser(user);
 

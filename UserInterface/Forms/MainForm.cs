@@ -1,21 +1,15 @@
-﻿using SmayDbEditor.UserInterface.Forms.StatusChanges;
+﻿using SmayDbEditor.UserInterface.Forms.Base;
+using SmayDbEditor.UserInterface.Forms.KanbansRemove;
+using SmayDbEditor.UserInterface.Forms.Logs;
+using SmayDbEditor.UserInterface.Forms.OrdersAddressChange;
 using SmayDbEditor.UserInterface.Forms.OrdersCorrection;
+using SmayDbEditor.UserInterface.Forms.PrintersAdding;
+using SmayDbEditor.UserInterface.Forms.StatusChanges;
+using SmayDbEditor.UserInterface.Forms.UnlockProductions;
 using SmayDbEditor.UserInterface.Helpers;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using SmayDbEditor.UserInterface.Forms.KanbansRemove;
-using SmayDbEditor.UserInterface.Forms.OrdersAddressChange;
-using SmayDbEditor.UserInterface.Forms.PrintersAdding;
-using SmayDbEditor.UserInterface.Forms.Logs;
-using SmayDbEditor.UserInterface.Forms.UnlockProductions;
-using SmayDbEditor.UserInterface.Forms.Base;
 
 namespace SmayDbEditor.UserInterface.Forms
 {
@@ -43,6 +37,11 @@ namespace SmayDbEditor.UserInterface.Forms
         private void Init()
         {
             tsslUser.Text = UserHelper.ActiveUser.Username;
+
+            if (!UserHelper.ActiveUser.IsInAdministrators)
+            {
+                tcMain.TabPages.Remove(tpAddictional);
+            }
         }
 
         #endregion

@@ -24,6 +24,7 @@ namespace UserInterface
             var services = new ServiceCollection();
             services.AddTransient<IDbConnection>((x) => new SqlConnection(connString));
             services.AddTransient<IOrderCorrectionRepository, OrderCorrectionRepository>();
+            services.AddTransient<IUnlockProductionRepository, UnlockProductionRepository>();
             services.AddTransient<IStatusChangeRepository, StatusChangeRepository>();
             services.AddTransient<IKanbanRemoveRepository, KanbanRemoveRepository>();
             services.AddTransient<IOrderAddressChangeRepository, OrderAddressChangeRepository>();

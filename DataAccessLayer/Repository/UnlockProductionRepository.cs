@@ -18,22 +18,22 @@ namespace SmayDbEditor.DataAccessLayer.Repository
 
         public UnlockProductionModel GetDocument(int procCode)
         {
-            var sql = $"select * from [SmayDB].[dbo].[P000_Locks01] where proccode = @procCode";
+            var sql = $"select * from [dbo].[P000_Locks01] where proccode = @procCode";
 
-            return _wmsConnection.QueryFirst<UnlockProductionModel>(sql, new { procCode = procCode});
+            return GetSmayDbConnection().QueryFirst<UnlockProductionModel>(sql, new { procCode = procCode});
         }
 
         public IEnumerable<UnlockProductionModel> GetDocuments()
         {
-            var sql = $"select * from [SmayDB].[dbo].[P000_Locks01]";            
+            var sql = $"select * from [dbo].[P000_Locks01]";            
 
-            return _wmsConnection.Query<UnlockProductionModel>(sql);
+            return GetSmayDbConnection().Query<UnlockProductionModel>(sql);
         }
 
         public void DeleteDocument(int procCode)
         {
-            var sql = $"delete from [SmayDB].[dbo].[P000_Locks01] where proccode = @procCode";
-            _wmsConnection.Execute(sql, new { procCode = procCode });
+            var sql = $"delete from [dbo].[P000_Locks01] where proccode = @procCode";
+            GetSmayDbConnection().Execute(sql, new { procCode = procCode });
         }
     }
 }

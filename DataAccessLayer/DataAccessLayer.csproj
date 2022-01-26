@@ -85,6 +85,7 @@
     <Compile Include="Models\PrinterAddingModel.cs" />
     <Compile Include="Models\StatusChangeModel.cs" />
     <Compile Include="Models\UnlockProductionModel.cs" />
+    <Compile Include="Models\UserGroupModel.cs" />
     <Compile Include="Models\UserHashSaltModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -98,6 +99,7 @@
     <Compile Include="Repository\UnlockProductionRepository.cs" />
     <Compile Include="Repository\UserRepository.cs" />
     <Compile Include="Utils\MultiConnectionDbUtil.cs" />
+    <Compile Include="Utils\Naming.cs" />
     <Compile Include="ViewModel\KanbanRemoveViewModel.cs" />
     <Compile Include="ViewModel\LogViewModel.cs" />
     <Compile Include="ViewModel\OrderAddressChangeViewModel.cs" />

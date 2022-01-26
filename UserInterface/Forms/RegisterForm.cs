@@ -1,13 +1,7 @@
-﻿using SmayDbEditor.DataAccessLayer.Interfaces;
+﻿using SmayDbEditor.DataAccessLayer.Models;
 using SmayDbEditor.UserInterface.Forms.Base;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 using System.Windows.Forms;
 
 namespace SmayDbEditor.UserInterface.Forms
@@ -18,6 +12,18 @@ namespace SmayDbEditor.UserInterface.Forms
         public RegisterForm()
         {
             InitializeComponent();
+            InitUserGroupDropdown();
+        }
+
+        private void InitUserGroupDropdown()
+        {
+            var bs = new BindingSource();
+            bs.DataSource = UserRepository.GetUserGroups();
+
+            cbAccountType.DataSource = bs.DataSource;
+
+            cbAccountType.DisplayMember = "GroupName";
+            cbAccountType.ValueMember = "Id";
         }
 
         public static RegisterForm Instance
@@ -49,8 +55,18 @@ namespace SmayDbEditor.UserInterface.Forms
             var username = txtLoginUser.Text;
             var password = txtPasswordUser.Text;
 
-            var result = AuthRepository.Register(username, password);
-            MessageBox.Show($"Uzytkownik {result.Username} zostal dodany");
-        }        
+            var selectedIndex = cbAccountType.SelectedIndex;
+            var selectedAccountType = (UserGroupModel)cbAccountType.Items[selectedIndex];
+
+            try
+            {
+                var result = AuthRepository.Register(username, password, selectedAccountType);
+                MessageBox.Show($"Uzytkownik {result.Username} zostal dodany");
+            }
+            catch (ValidationException ex)
+            {
+                MessageBox.Show($"{ex.Message}");
+            }
+        }
     }
 }
