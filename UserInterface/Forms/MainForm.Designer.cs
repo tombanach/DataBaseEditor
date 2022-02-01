@@ -29,10 +29,8 @@ namespace SmayDbEditor.UserInterface.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.ssMain = new System.Windows.Forms.StatusStrip();
             this.tsslVersion = new System.Windows.Forms.ToolStripStatusLabel();
-            this.tsslDatabase = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslUser = new System.Windows.Forms.ToolStripStatusLabel();
             this.tcMain = new System.Windows.Forms.TabControl();
             this.tpFunctions = new System.Windows.Forms.TabPage();
@@ -64,7 +62,6 @@ namespace SmayDbEditor.UserInterface.Forms
             // 
             this.ssMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsslVersion,
-            this.tsslDatabase,
             this.tsslUser});
             this.ssMain.Location = new System.Drawing.Point(0, 539);
             this.ssMain.Name = "ssMain";
@@ -77,13 +74,6 @@ namespace SmayDbEditor.UserInterface.Forms
             this.tsslVersion.Name = "tsslVersion";
             this.tsslVersion.Size = new System.Drawing.Size(81, 17);
             this.tsslVersion.Text = "Wersja: 1.0.0.0";
-            // 
-            // tsslDatabase
-            // 
-            this.tsslDatabase.Image = ((System.Drawing.Image)(resources.GetObject("tsslDatabase.Image")));
-            this.tsslDatabase.Name = "tsslDatabase";
-            this.tsslDatabase.Size = new System.Drawing.Size(163, 17);
-            this.tsslDatabase.Text = "Baza: Wms_SmayDB_Conn";
             // 
             // tsslUser
             // 
@@ -261,9 +251,9 @@ namespace SmayDbEditor.UserInterface.Forms
             // 
             this.btnRegister.BackColor = System.Drawing.Color.White;
             this.btnRegister.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRegister.Location = new System.Drawing.Point(3, 71);
+            this.btnRegister.Location = new System.Drawing.Point(3, 79);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(125, 47);
+            this.btnRegister.Size = new System.Drawing.Size(125, 66);
             this.btnRegister.TabIndex = 4;
             this.btnRegister.Text = "Dodaj użytkownika";
             this.btnRegister.UseVisualStyleBackColor = false;
@@ -273,9 +263,9 @@ namespace SmayDbEditor.UserInterface.Forms
             // 
             this.splitter7.BackColor = System.Drawing.Color.White;
             this.splitter7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitter7.Location = new System.Drawing.Point(3, 49);
+            this.splitter7.Location = new System.Drawing.Point(3, 69);
             this.splitter7.Name = "splitter7";
-            this.splitter7.Size = new System.Drawing.Size(125, 22);
+            this.splitter7.Size = new System.Drawing.Size(125, 10);
             this.splitter7.TabIndex = 3;
             this.splitter7.TabStop = false;
             // 
@@ -285,7 +275,7 @@ namespace SmayDbEditor.UserInterface.Forms
             this.btnLogs.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnLogs.Location = new System.Drawing.Point(3, 3);
             this.btnLogs.Name = "btnLogs";
-            this.btnLogs.Size = new System.Drawing.Size(125, 46);
+            this.btnLogs.Size = new System.Drawing.Size(125, 66);
             this.btnLogs.TabIndex = 2;
             this.btnLogs.Text = "Logi";
             this.btnLogs.UseVisualStyleBackColor = false;
@@ -352,7 +342,6 @@ namespace SmayDbEditor.UserInterface.Forms
         private System.Windows.Forms.Button btnKanbansRemove;
         private System.Windows.Forms.Splitter splitter4;
         private System.Windows.Forms.ToolStripStatusLabel tsslVersion;
-        private System.Windows.Forms.ToolStripStatusLabel tsslDatabase;
         private System.Windows.Forms.ToolStripStatusLabel tsslUser;
         private System.Windows.Forms.TabControl tcTabs;
         private System.Windows.Forms.Button btnPrintersAdding;

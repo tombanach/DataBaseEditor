@@ -133,7 +133,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(599, 351);
+            this.ClientSize = new System.Drawing.Size(778, 365);
             this.Controls.Add(this.cbAccountType);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);

@@ -61,7 +61,7 @@
             this.tlpLogs.RowCount = 2;
             this.tlpLogs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tlpLogs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpLogs.Size = new System.Drawing.Size(661, 455);
+            this.tlpLogs.Size = new System.Drawing.Size(778, 365);
             this.tlpLogs.TabIndex = 0;
             // 
             // pLogs
@@ -73,13 +73,13 @@
             this.pLogs.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pLogs.Location = new System.Drawing.Point(3, 3);
             this.pLogs.Name = "pLogs";
-            this.pLogs.Size = new System.Drawing.Size(655, 34);
+            this.pLogs.Size = new System.Drawing.Size(772, 34);
             this.pLogs.TabIndex = 0;
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox1.Location = new System.Drawing.Point(500, 3);
+            this.textBox1.Location = new System.Drawing.Point(617, 3);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(152, 27);
             this.textBox1.TabIndex = 3;
@@ -88,7 +88,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(358, 6);
+            this.label1.Location = new System.Drawing.Point(475, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(136, 20);
             this.label1.TabIndex = 2;
@@ -136,7 +136,7 @@
             this.dgvLogs.Name = "dgvLogs";
             this.dgvLogs.ReadOnly = true;
             this.dgvLogs.RowHeadersVisible = false;
-            this.dgvLogs.Size = new System.Drawing.Size(655, 409);
+            this.dgvLogs.Size = new System.Drawing.Size(772, 319);
             this.dgvLogs.TabIndex = 1;
             // 
             // logidDataGridViewTextBoxColumn
@@ -184,7 +184,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(661, 455);
+            this.ClientSize = new System.Drawing.Size(778, 365);
             this.Controls.Add(this.tlpLogs);
             this.Name = "LogsForm";
             this.Text = "Logi";
