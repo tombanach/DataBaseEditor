@@ -28,6 +28,7 @@ namespace UserInterface
             services.AddTransient<IStatusChangeRepository, StatusChangeRepository>();
             services.AddTransient<IKanbanRemoveRepository, KanbanRemoveRepository>();
             services.AddTransient<IOrderAddressChangeRepository, OrderAddressChangeRepository>();
+            services.AddTransient<ILogRepository, LogRepository>();
             services.AddTransient<IAuthRepository, AuthRepository>();
             services.AddTransient<IUserRepository, UserRepository>();
             ServiceProvider = services.BuildServiceProvider();

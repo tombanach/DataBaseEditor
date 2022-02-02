@@ -19,14 +19,14 @@ namespace SmayDbEditor.DataAccessLayer.Repository
 
         public LogModel GetLog(int logId)
         {
-            var sql = $"select * form [dbo].[logi] where log_id = @logId";
+            var sql = $"select * from [dbo].[logi] where log_id = @logId";
 
             return _wmsConnection.QueryFirst<LogModel>(sql, new { logId = logId });
         }
 
         public IEnumerable<LogModel> GetLogs()
         {
-            var sql = $"select * form [dbo].[logi]";
+            var sql = $"select * from [dbo].[logi]";
 
             return _wmsConnection.Query<LogModel>(sql);
         }

@@ -221,6 +221,41 @@ namespace SmayDbEditor.UserInterface.Helpers
         }
 
         #endregion
+        #region Logs
+
+        public static IList<LogViewModel> MapLogModelToLogViewModel
+            (IEnumerable<LogModel> logsModel)
+        {
+            IList<LogViewModel> logsViewModel = new List<LogViewModel>();
+
+            foreach (LogModel logModel in logsModel)
+            {
+                LogViewModel logViewModel = new LogViewModel();
+                logViewModel.log_id = logModel.log_id;
+                logViewModel.log_num = logModel.Log_Num;
+                logViewModel.log_descr = logModel.Log_Descr;
+                logViewModel.log_tstamp = logModel.Log_Tstamp;
+                logViewModel.log_error = logModel.Log_Error;
+
+                logsViewModel.Add(logViewModel);
+            }
+
+            return logsViewModel;
+        }
+
+        public static LogViewModel MapLogModelToLogViewModel(LogViewModel logModel)
+        {
+            LogViewModel logViewModel = new LogViewModel();
+            logViewModel.log_id = logModel.log_id;
+            logViewModel.log_num = logModel.log_num;
+            logViewModel.log_descr = logModel.log_descr;
+            logViewModel.log_tstamp = logModel.log_tstamp;
+            logViewModel.log_error = logModel.log_error;
+
+            return logViewModel;
+        }
+
+        #endregion
 
         public static UserViewModel MapUserModelToUserViewModel(UserModel userModel)
         {

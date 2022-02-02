@@ -316,6 +316,7 @@
     <None Include="Properties\DataSources\SmayDbEditor.DataAccessLayer.ViewModel.StatusChangeViewModel.datasource" />
     <None Include="Properties\DataSources\SmayDbEditor.DataAccessLayer.ViewModel.UnlockProductionViewModel.datasource" />
     <None Include="Properties\DataSources\SmayDbEditor.DataAccessLayer.ViewModels.OrderCorrectionViewModel.datasource" />
+    <None Include="Properties\DataSources\SmayDbEditor.UserInterface.Forms.Logs.LogsForm.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -31,17 +31,17 @@
             this.components = new System.ComponentModel.Container();
             this.tlpLogs = new System.Windows.Forms.TableLayoutPanel();
             this.pLogs = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.LogsSearchBar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.dgvLogs = new System.Windows.Forms.DataGridView();
-            this.logidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lognumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.logdescrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.logtstampDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.logerrorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bsLogs = new System.Windows.Forms.BindingSource(this.components);
+            this.col_log_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_log_num = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_log_descr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_log_tstamp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_log_error = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tlpLogs.SuspendLayout();
             this.pLogs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLogs)).BeginInit();
@@ -66,7 +66,7 @@
             // 
             // pLogs
             // 
-            this.pLogs.Controls.Add(this.textBox1);
+            this.pLogs.Controls.Add(this.LogsSearchBar);
             this.pLogs.Controls.Add(this.label1);
             this.pLogs.Controls.Add(this.splitter1);
             this.pLogs.Controls.Add(this.btnRefresh);
@@ -76,13 +76,14 @@
             this.pLogs.Size = new System.Drawing.Size(772, 34);
             this.pLogs.TabIndex = 0;
             // 
-            // textBox1
+            // LogsSearchBar
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox1.Location = new System.Drawing.Point(617, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(152, 27);
-            this.textBox1.TabIndex = 3;
+            this.LogsSearchBar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.LogsSearchBar.Location = new System.Drawing.Point(617, 3);
+            this.LogsSearchBar.Name = "LogsSearchBar";
+            this.LogsSearchBar.Size = new System.Drawing.Size(152, 27);
+            this.LogsSearchBar.TabIndex = 3;
+            this.LogsSearchBar.TextChanged += new System.EventHandler(this.LogsSearchBar_TextChanged);
             // 
             // label1
             // 
@@ -116,6 +117,7 @@
             this.btnRefresh.Text = "Odśwież";
             this.btnRefresh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // dgvLogs
             // 
@@ -125,11 +127,11 @@
             this.dgvLogs.BackgroundColor = System.Drawing.Color.White;
             this.dgvLogs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLogs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.logidDataGridViewTextBoxColumn,
-            this.lognumDataGridViewTextBoxColumn,
-            this.logdescrDataGridViewTextBoxColumn,
-            this.logtstampDataGridViewTextBoxColumn,
-            this.logerrorDataGridViewTextBoxColumn});
+            this.col_log_id,
+            this.col_log_num,
+            this.col_log_descr,
+            this.col_log_tstamp,
+            this.col_log_error});
             this.dgvLogs.DataSource = this.bsLogs;
             this.dgvLogs.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvLogs.Location = new System.Drawing.Point(3, 43);
@@ -139,46 +141,49 @@
             this.dgvLogs.Size = new System.Drawing.Size(772, 319);
             this.dgvLogs.TabIndex = 1;
             // 
-            // logidDataGridViewTextBoxColumn
-            // 
-            this.logidDataGridViewTextBoxColumn.DataPropertyName = "log_id";
-            this.logidDataGridViewTextBoxColumn.HeaderText = "log_id";
-            this.logidDataGridViewTextBoxColumn.Name = "logidDataGridViewTextBoxColumn";
-            this.logidDataGridViewTextBoxColumn.ReadOnly = true;
-            this.logidDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // lognumDataGridViewTextBoxColumn
-            // 
-            this.lognumDataGridViewTextBoxColumn.DataPropertyName = "log_num";
-            this.lognumDataGridViewTextBoxColumn.HeaderText = "log_num";
-            this.lognumDataGridViewTextBoxColumn.Name = "lognumDataGridViewTextBoxColumn";
-            this.lognumDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // logdescrDataGridViewTextBoxColumn
-            // 
-            this.logdescrDataGridViewTextBoxColumn.DataPropertyName = "log_descr";
-            this.logdescrDataGridViewTextBoxColumn.HeaderText = "log_descr";
-            this.logdescrDataGridViewTextBoxColumn.Name = "logdescrDataGridViewTextBoxColumn";
-            this.logdescrDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // logtstampDataGridViewTextBoxColumn
-            // 
-            this.logtstampDataGridViewTextBoxColumn.DataPropertyName = "log_tstamp";
-            this.logtstampDataGridViewTextBoxColumn.HeaderText = "log_tstamp";
-            this.logtstampDataGridViewTextBoxColumn.Name = "logtstampDataGridViewTextBoxColumn";
-            this.logtstampDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // logerrorDataGridViewTextBoxColumn
-            // 
-            this.logerrorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.logerrorDataGridViewTextBoxColumn.DataPropertyName = "log_error";
-            this.logerrorDataGridViewTextBoxColumn.HeaderText = "log_error";
-            this.logerrorDataGridViewTextBoxColumn.Name = "logerrorDataGridViewTextBoxColumn";
-            this.logerrorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // bsLogs
             // 
             this.bsLogs.DataSource = typeof(SmayDbEditor.DataAccessLayer.ViewModel.LogViewModel);
+            // 
+            // col_log_id
+            // 
+            this.col_log_id.DataPropertyName = "log_id";
+            this.col_log_id.HeaderText = "log_id";
+            this.col_log_id.Name = "col_log_id";
+            this.col_log_id.ReadOnly = true;
+            this.col_log_id.Visible = false;
+            // 
+            // col_log_num
+            // 
+            this.col_log_num.DataPropertyName = "log_num";
+            this.col_log_num.HeaderText = "log_num";
+            this.col_log_num.Name = "col_log_num";
+            this.col_log_num.ReadOnly = true;
+            this.col_log_num.Width = 140;
+            // 
+            // col_log_descr
+            // 
+            this.col_log_descr.DataPropertyName = "log_descr";
+            this.col_log_descr.HeaderText = "log_descr";
+            this.col_log_descr.Name = "col_log_descr";
+            this.col_log_descr.ReadOnly = true;
+            this.col_log_descr.Width = 300;
+            // 
+            // col_log_tstamp
+            // 
+            this.col_log_tstamp.DataPropertyName = "log_tstamp";
+            this.col_log_tstamp.HeaderText = "log_tstamp";
+            this.col_log_tstamp.Name = "col_log_tstamp";
+            this.col_log_tstamp.ReadOnly = true;
+            this.col_log_tstamp.Width = 140;
+            // 
+            // col_log_error
+            // 
+            this.col_log_error.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col_log_error.DataPropertyName = "log_error";
+            this.col_log_error.HeaderText = "log_error";
+            this.col_log_error.Name = "col_log_error";
+            this.col_log_error.ReadOnly = true;
             // 
             // LogsForm
             // 
@@ -204,14 +209,14 @@
         private System.Windows.Forms.Panel pLogs;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Splitter splitter1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox LogsSearchBar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvLogs;
         private System.Windows.Forms.BindingSource bsLogs;
-        private System.Windows.Forms.DataGridViewTextBoxColumn logidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lognumDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn logdescrDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn logtstampDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn logerrorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_log_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_log_num;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_log_descr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_log_tstamp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_log_error;
     }
 }

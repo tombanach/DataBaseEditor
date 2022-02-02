@@ -111,7 +111,19 @@ namespace SmayDbEditor.UserInterface.Forms.Base
         #endregion
         #region LogRepository
 
+        private ILogRepository _logRepository;
 
+        protected ILogRepository LogRepository
+        {
+            get
+            {
+                if (_logRepository == null)
+                {
+                    _logRepository = (ILogRepository)Program.ServiceProvider.GetService(typeof(ILogRepository));
+                }
+                return _logRepository;
+            }
+        }
 
         #endregion
 
