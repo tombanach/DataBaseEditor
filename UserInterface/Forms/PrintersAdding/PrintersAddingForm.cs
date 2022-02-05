@@ -1,6 +1,7 @@
 ﻿using SmayDbEditor.DataAccessLayer.Models;
 using SmayDbEditor.DataAccessLayer.ViewModel;
 using SmayDbEditor.UserInterface.Classes;
+using SmayDbEditor.UserInterface.Forms.Base;
 using SmayDbEditor.UserInterface.Helpers;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ using System.Windows.Forms;
 
 namespace SmayDbEditor.UserInterface.Forms.PrintersAdding
 {
-    public partial class PrintersAddingForm : Form
+    public partial class PrintersAddingForm : BaseForm
     {
         #region Fields
 
