@@ -18,6 +18,7 @@ namespace SmayDbEditor.UserInterface.Forms.PrintersAdding
         #region Fields
 
         public EventHandler ReloadPrintersAdding;
+        private PrinterAddingModel _printerAdding;
 
         #endregion
         #region Constructor
