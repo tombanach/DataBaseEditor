@@ -109,7 +109,7 @@ namespace SmayDbEditor.UserInterface.Forms.StatusChanges
         {
             _instance = null;
         }
-
+        
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             RefreshGrid();

@@ -74,6 +74,7 @@
     <Compile Include="Interfaces\ILogRepository.cs" />
     <Compile Include="Interfaces\IOrderAddressChangeRepository.cs" />
     <Compile Include="Interfaces\IOrderCorrectionRepository.cs" />
+    <Compile Include="Interfaces\IPrinterAddingRepository.cs" />
     <Compile Include="Interfaces\IStatusChangeRepository.cs" />
     <Compile Include="Interfaces\IUnlockProductionRepository.cs" />
     <Compile Include="Interfaces\IUserRepository.cs" />
@@ -95,6 +96,7 @@
     <Compile Include="Repository\LogRepository.cs" />
     <Compile Include="Repository\OrderAddressChangeRepository.cs" />
     <Compile Include="Repository\OrderCorrectionRepository.cs" />
+    <Compile Include="Repository\PrinterAddingRepository.cs" />
     <Compile Include="Repository\StatusChangeRepository.cs" />
     <Compile Include="Repository\UnlockProductionRepository.cs" />
     <Compile Include="Repository\UserRepository.cs" />

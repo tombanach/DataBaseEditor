@@ -84,6 +84,7 @@ namespace SmayDbEditor.UserInterface.Forms.PrintersAdding
             // 
             // txtComputerName
             // 
+            this.txtComputerName.Enabled = false;
             this.txtComputerName.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtComputerName.Location = new System.Drawing.Point(164, 152);
             this.txtComputerName.Name = "txtComputerName";

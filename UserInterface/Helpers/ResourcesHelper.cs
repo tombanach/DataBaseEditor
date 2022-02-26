@@ -9,6 +9,7 @@ namespace SmayDbEditor.UserInterface.Helpers
 {
     public static class ResourcesHelper
     {
+        // Helper for images
         public const string CloseButtonName = "close_16.png";
 
         public static string ResourcesFilePath

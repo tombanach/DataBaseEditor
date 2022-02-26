@@ -1,4 +1,5 @@
 ﻿using SmayDbEditor.DataAccessLayer.Models;
+using SmayDbEditor.DataAccessLayer.Repository;
 using SmayDbEditor.DataAccessLayer.ViewModel;
 using SmayDbEditor.UserInterface.Classes;
 using SmayDbEditor.UserInterface.Forms.Base;
@@ -55,12 +56,17 @@ namespace SmayDbEditor.UserInterface.Forms.PrintersAdding
         public PrintersAddingForm()
         {
             InitializeComponent();
-            fakePrintersAdding = GetFakePrintersAdding();
-            PreparePrintersAddingData();
+            //RefreshGrid();
         }
 
         #endregion
         #region Private Methods
+
+        private void RefreshGrid()
+        {
+            fakePrintersAdding = GetFakePrintersAdding();
+            PreparePrintersAddingData();
+        }
 
         private void PreparePrintersAddingData()
         {
@@ -70,31 +76,8 @@ namespace SmayDbEditor.UserInterface.Forms.PrintersAdding
 
         private IList<PrinterAddingViewModel> GetFakePrintersAdding()
         {
-            IList<PrinterAddingModel> fakePrintersAddingModel = new List<PrinterAddingModel>()
-            {
-                new PrinterAddingModel()
-                {
-                    id = 1,
-                    PrinterName = "Bullzip PDF Printer",
-                    hostname = "LAPT87"
-                },
-
-                new PrinterAddingModel()
-                {
-                    id = 2,
-                    PrinterName = "ZebraSPIDI",
-                    hostname = "KOMP130"
-                },
-
-                new PrinterAddingModel()
-                {
-                    id = 3,
-                    PrinterName = "ZebraMagC78",
-                    hostname = "x"
-                }
-            };
-
-            return MappingHelper.MapPrinterAddingModelToPrinterAddingViewModel(fakePrintersAddingModel);
+            var printers = PrinterAddingRepository.GetPrinters();
+            return MappingHelper.MapPrinterAddingModelToPrinterAddingViewModel(printers);
         }
 
         #endregion
@@ -143,19 +126,8 @@ namespace SmayDbEditor.UserInterface.Forms.PrintersAdding
             int printerAddingId = Convert.ToInt32(dgvPrintersAdding.CurrentRow.Cells["col_id"].Value);
             int selectedRowIndex = dgvPrintersAdding.CurrentRow.Index;
 
-            // RemovePrinterAdding(printerAddingId);
-
-            PrinterAddingViewModel printerAdding = fakePrintersAdding.Where(x => x.id == printerAddingId).FirstOrDefault();
-            if (printerAdding != null)
-            {
-                bsPrintersAdding.Remove(printerAdding);
-
-                if (dgvPrintersAdding.Rows.Count > 1)
-                {
-                    dgvPrintersAdding.ClearSelection();
-                    dgvPrintersAdding.Rows[dgvPrintersAdding.Rows.Count - 1].Selected = true;
-                }
-            }
+            PrinterAddingRepository.DeletePrinter(printerAddingId);
+            RefreshGrid();
         }
 
         private void PrintersAddingForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -163,6 +135,11 @@ namespace SmayDbEditor.UserInterface.Forms.PrintersAdding
             _instance = null;
         }
 
-        #endregion        
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            RefreshGrid();
+        }
+
+        #endregion
     }
 }

@@ -109,6 +109,23 @@ namespace SmayDbEditor.UserInterface.Forms.Base
         }
 
         #endregion
+        #region PrinterAddingRepository
+
+        private IPrinterAddingRepository _printerAddingRepository;
+
+        protected IPrinterAddingRepository PrinterAddingRepository
+        {
+            get
+            {
+                if (_printerAddingRepository == null)
+                {
+                    _printerAddingRepository = (IPrinterAddingRepository)Program.ServiceProvider.GetService(typeof(IPrinterAddingRepository));
+                }
+                return _printerAddingRepository;
+            }
+        }
+
+        #endregion
         #region LogRepository
 
         private ILogRepository _logRepository;
@@ -127,6 +144,7 @@ namespace SmayDbEditor.UserInterface.Forms.Base
 
         #endregion
 
+        #region Registration
 
         private IAuthRepository _authRepository;
 
@@ -155,5 +173,7 @@ namespace SmayDbEditor.UserInterface.Forms.Base
                 return _userRepository;
             }
         }
+
+        #endregion
     }
 }

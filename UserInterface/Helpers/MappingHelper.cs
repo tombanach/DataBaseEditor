@@ -257,6 +257,8 @@ namespace SmayDbEditor.UserInterface.Helpers
 
         #endregion
 
+        #region Registration
+
         public static UserViewModel MapUserModelToUserViewModel(UserModel userModel)
         {
             return new UserViewModel
@@ -266,5 +268,7 @@ namespace SmayDbEditor.UserInterface.Helpers
                 UserGroups = userModel.UserGroups,
             };
         }
+
+        #endregion
     }
 }
