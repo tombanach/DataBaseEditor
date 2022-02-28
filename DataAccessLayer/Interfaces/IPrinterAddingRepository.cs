@@ -11,6 +11,7 @@ namespace SmayDbEditor.DataAccessLayer.Interfaces
     {
         IEnumerable<PrinterAddingModel> GetPrinters();
         PrinterAddingModel GetPrinter(int id);
+        void AddPrinter(PrinterAddingModel printer);
         void UpdatePrinter(PrinterAddingModel printer);
         void DeletePrinter(int id);
     }

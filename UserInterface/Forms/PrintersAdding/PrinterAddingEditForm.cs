@@ -37,6 +37,7 @@ namespace SmayDbEditor.UserInterface.Forms.PrintersAdding
         {
             txtComputerName.Text = printerAdding.hostname;
             txtPrinterName.Text = printerAdding.PrinterName;
+            txtPrinterId.Text = printerAdding.id.ToString();
         }
 
         private PrinterAddingModel GetFakePrinterAdding(int printerAddingId)
@@ -117,27 +118,25 @@ namespace SmayDbEditor.UserInterface.Forms.PrintersAdding
 
         protected override void Save()
         {
-            if (ValidateForm())
+            if (!ValidateForm())
             {
-                var printerAdding = new PrinterAddingModel
-                {
-                    PrinterName = _printerAdding.PrinterName,
-                    hostname = _printerAdding.hostname
-                };
-
-                UpdatePrinterAdding(printerAdding);
-                
-                // printerAdding = ModifyPrinterAdding(printerAdding);
-
-                ReloadPrintersAdding?.Invoke(btnSave, new PrinterAddingEventArgs(printerAdding));
-
-                Close();
+                return;
             }
-        }
 
-        private void UpdatePrinterAdding(PrinterAddingModel printerAdding)
-        {
+            var printerAdding = new PrinterAddingModel
+            {
+                PrinterName = txtPrinterName.Text,
+                hostname = txtComputerName.Text,
+                id = int.Parse(txtPrinterId.Text),
+            };
+
             PrinterAddingRepository.UpdatePrinter(printerAdding);
+            
+            // printerAdding = ModifyPrinterAdding(printerAdding);
+
+            ReloadPrintersAdding?.Invoke(btnSave, new PrinterAddingEventArgs(printerAdding));
+
+            Close();
         }
 
         protected override void Cancel()

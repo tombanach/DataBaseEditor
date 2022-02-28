@@ -16,6 +16,7 @@ namespace SmayDbEditor.UserInterface.Forms.Base
 {
     public partial class BaseForm : Form
     {
+       
         #region Constructor
 
         public BaseForm()

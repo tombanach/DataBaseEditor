@@ -41,10 +41,10 @@ namespace SmayDbEditor.UserInterface.Forms.PrintersAdding
             this.splitter3 = new System.Windows.Forms.Splitter();
             this.btnCreate = new System.Windows.Forms.Button();
             this.dgvPrintersAdding = new System.Windows.Forms.DataGridView();
-            this.bsPrintersAdding = new System.Windows.Forms.BindingSource(this.components);
             this.col_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_PrinterName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_hostname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bsPrintersAdding = new System.Windows.Forms.BindingSource(this.components);
             this.tlpPrintersAdding.SuspendLayout();
             this.pPrintersAdding.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrintersAdding)).BeginInit();
@@ -191,10 +191,6 @@ namespace SmayDbEditor.UserInterface.Forms.PrintersAdding
             this.dgvPrintersAdding.Size = new System.Drawing.Size(794, 404);
             this.dgvPrintersAdding.TabIndex = 1;
             // 
-            // bsPrintersAdding
-            // 
-            this.bsPrintersAdding.DataSource = typeof(SmayDbEditor.DataAccessLayer.ViewModel.PrinterAddingViewModel);
-            // 
             // col_id
             // 
             this.col_id.DataPropertyName = "id";
@@ -220,6 +216,10 @@ namespace SmayDbEditor.UserInterface.Forms.PrintersAdding
             this.col_hostname.Name = "col_hostname";
             this.col_hostname.ReadOnly = true;
             this.col_hostname.ToolTipText = "Nazwa komputera";
+            // 
+            // bsPrintersAdding
+            // 
+            this.bsPrintersAdding.DataSource = typeof(SmayDbEditor.DataAccessLayer.ViewModel.PrinterAddingViewModel);
             // 
             // PrintersAddingForm
             // 

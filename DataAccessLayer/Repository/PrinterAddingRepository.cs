@@ -31,20 +31,35 @@ namespace SmayDbEditor.DataAccessLayer.Repository
         }
 
         //POPRAWIĆ - dodać edytowanie 2 pola
+        public void AddPrinter(PrinterAddingModel printer)
+        {
+            var sql = $"insert into dbo.printers (PrinterName, hostname) values (@PrinterName, @hostname)";
+            GetSmayDbConnection().Execute(sql, new { @PrinterName = printer.PrinterName, @hostname = printer.hostname });
+        }
+
         public void UpdatePrinter(PrinterAddingModel printer)
         {
             var sb = new StringBuilder();
             sb.Append($"update dbo.[printers] set ");
             sb.Append($"PrinterName = @PrinterName ");
+            sb.Append($",hostname = @hostname ");
             sb.Append($"where id = @id");
 
-            GetSmayDbConnection().Execute(sb.ToString(), new { @PrinterName = printer.PrinterName, id = printer.id });
+            GetSmayDbConnection()
+                .Execute(
+                    sb.ToString(),
+                    new 
+                    {
+                        @PrinterName = printer.PrinterName,
+                        @hostname = printer.hostname,
+                        @id = printer.id ,
+                    });
         }
 
         public void DeletePrinter(int id)
         {
             var sql = $"delete from dbo.printers where id = @Id";
             GetSmayDbConnection().Execute(sql, new { id = id });
-        }
+        }        
     }
 }

@@ -16,7 +16,6 @@ namespace SmayDbEditor.UserInterface.Forms.PrintersAdding
     public partial class PrinterAddingAddForm : BaseEditForm
     {
         #region Fields
-
         public EventHandler ReloadPrintersAdding;
         private PrinterAddingModel _printerAdding;
 
@@ -26,11 +25,19 @@ namespace SmayDbEditor.UserInterface.Forms.PrintersAdding
         public PrinterAddingAddForm()
         {
             InitializeComponent();
+            _printerAdding = new PrinterAddingModel();
+            PreparePrinterAddingData(_printerAdding);
             ValidateControls();
         }
 
         #endregion
         #region Private Methods
+
+        private void PreparePrinterAddingData(PrinterAddingModel printerAdding)
+        {
+            txtComputerName.Text = printerAdding.hostname;
+            txtPrinterName.Text = printerAdding.PrinterName;
+        }
 
         private void ValidateControls()
         {
@@ -105,24 +112,24 @@ namespace SmayDbEditor.UserInterface.Forms.PrintersAdding
 
         protected override void Save()
         {
-            if (ValidateForm())
+            if (!ValidateForm())
             {
-                PrinterAddingModel printerAdding = new PrinterAddingModel()
-                {
-                    PrinterName = txtPrinterName.Text,
-                    hostname = txtComputerName.Text
-                };
-
-                //printerAdding = CreatePrinterAdding(printerAdding);
-                printerAdding.id = 4;
-
-                ReloadPrintersAdding?.Invoke(btnSave, new PrinterAddingEventArgs(printerAdding));
-
-                Close();
+                return;
             }
+
+            var printerAdding = new PrinterAddingModel
+            {
+                PrinterName = txtPrinterName.Text,
+                hostname = txtComputerName.Text
+            };
+
+            PrinterAddingRepository.AddPrinter(printerAdding);
+
+            // printerAdding = ModifyPrinterAdding(printerAdding);
+
+            ReloadPrintersAdding?.Invoke(btnSave, new PrinterAddingEventArgs(printerAdding));
+            Close();
         }
-
-
 
         protected override void Cancel()
         {
@@ -130,5 +137,10 @@ namespace SmayDbEditor.UserInterface.Forms.PrintersAdding
         }
 
         #endregion
+
+        private void PrinterAddingAddForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
     }
 }

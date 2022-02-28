@@ -56,7 +56,7 @@ namespace SmayDbEditor.UserInterface.Forms.PrintersAdding
         public PrintersAddingForm()
         {
             InitializeComponent();
-            //RefreshGrid();
+            RefreshGrid();
         }
 
         #endregion
@@ -93,13 +93,11 @@ namespace SmayDbEditor.UserInterface.Forms.PrintersAdding
                 {
                     PrinterAddingViewModel printerAdding
                         = MappingHelper.MapPrinterAddingModelToPrinterAddingViewModel(eventArgs.PrinterAdding);
-                    bsPrintersAdding.Add(printerAdding);
-
-                    dgvPrintersAdding.ClearSelection();
-                    dgvPrintersAdding.Rows[dgvPrintersAdding.Rows.Count - 1].Selected = true;
                 }
+                RefreshGrid();
             };
             frm.ShowDialog();
+            
         }
 
         private void btnModify_Click(object sender, EventArgs e)
@@ -117,6 +115,7 @@ namespace SmayDbEditor.UserInterface.Forms.PrintersAdding
                         = MappingHelper.MapPrinterAddingModelToPrinterAddingViewModel(eventArgs.PrinterAdding);
                     bsPrintersAdding[selectedRowIndex] = printerAdding;
                 }
+                RefreshGrid();
             };
             frm.ShowDialog();
         }

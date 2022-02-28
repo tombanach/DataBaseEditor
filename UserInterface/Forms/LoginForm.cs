@@ -18,9 +18,6 @@ namespace SmayDbEditor.UserInterface.Forms
         public LoginForm()
         {
             InitializeComponent();
-
-            txtUserName.Text = "weekend";
-            txtPassword.Text = "Dupa54321";
         }
 
         private void btnExit_Click(object sender, EventArgs e)

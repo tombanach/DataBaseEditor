@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace SmayDbEditor.UserInterface.Forms.Base
 {
     partial class BaseForm

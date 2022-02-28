@@ -146,6 +146,7 @@ namespace SmayDbEditor.UserInterface.Forms.PrintersAdding
             this.KeyPreview = true;
             this.Name = "PrinterAddingAddForm";
             this.Text = "Dodaj komputer do drukarki";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PrinterAddingAddForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.epPrinterName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epComputerName)).EndInit();
             this.ResumeLayout(false);

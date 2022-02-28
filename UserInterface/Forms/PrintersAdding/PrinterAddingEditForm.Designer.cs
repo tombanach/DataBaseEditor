@@ -39,6 +39,7 @@ namespace SmayDbEditor.UserInterface.Forms.PrintersAdding
             this.btnCancel = new System.Windows.Forms.Button();
             this.epPrinterName = new System.Windows.Forms.ErrorProvider(this.components);
             this.epComputerName = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtPrinterId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.epPrinterName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epComputerName)).BeginInit();
             this.SuspendLayout();
@@ -84,7 +85,6 @@ namespace SmayDbEditor.UserInterface.Forms.PrintersAdding
             // 
             // txtComputerName
             // 
-            this.txtComputerName.Enabled = false;
             this.txtComputerName.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtComputerName.Location = new System.Drawing.Point(164, 152);
             this.txtComputerName.Name = "txtComputerName";
@@ -132,11 +132,20 @@ namespace SmayDbEditor.UserInterface.Forms.PrintersAdding
             this.epComputerName.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.epComputerName.ContainerControl = this;
             // 
+            // txtPrinterId
+            // 
+            this.txtPrinterId.Location = new System.Drawing.Point(12, 219);
+            this.txtPrinterId.Name = "txtPrinterId";
+            this.txtPrinterId.Size = new System.Drawing.Size(10, 20);
+            this.txtPrinterId.TabIndex = 12;
+            this.txtPrinterId.Visible = false;
+            // 
             // PrinterAddingEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(338, 282);
+            this.Controls.Add(this.txtPrinterId);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtComputerName);
@@ -164,5 +173,6 @@ namespace SmayDbEditor.UserInterface.Forms.PrintersAdding
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.ErrorProvider epPrinterName;
         private System.Windows.Forms.ErrorProvider epComputerName;
+        private System.Windows.Forms.TextBox txtPrinterId;
     }
 }
