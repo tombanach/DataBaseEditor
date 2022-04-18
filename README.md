@@ -1,3 +1,4 @@
 # Smay Database Editor
 
-Application for editing the company database for orders
+
+This is my engineering thesis and application for editing the company database for orders
